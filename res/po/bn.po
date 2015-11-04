@@ -1,0 +1,1860 @@
+msgid "IDS_COM_SK_OK"
+msgstr "ওকে"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "অক্ষর সর্বাধিক সংখ্যায় পৌঁছেছে।"
+
+msgid "IDS_COM_BODY_DETAILS_TIME"
+msgstr "সময়"
+
+msgid "IDS_COM_OPT_SORT_BY"
+msgstr "এইভাবে বাছাই"
+
+msgid "IDS_COM_SK_SEARCH"
+msgstr "অনুসন্ধান"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "সময়"
+
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "অনুসন্ধান"
+
+msgid "IDS_COM_BODY_NO_SEARCH_RESULTS"
+msgstr "কোনও অনুসন্ধান ফলাফল নেই"
+
+msgid "IDS_COM_BODY_DETAILS_NAME"
+msgstr "নাম"
+
+msgid "IDS_CLOCK_HEADER_EDIT_CITY"
+msgstr "শহর সম্পাদনা করুন"
+
+msgid "IDS_CLOCK_BODY_CITYNAME_SREDNEKOLYMSK"
+msgstr "সেরেনেকোলিমক্স"
+
+msgid "IDS_CLOCK_BODY_CITYNAME_SEVERO_KURILSK"
+msgstr "সেভেরো-কুরিলিস্ক"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "ইতিমধ্যে রয়েছে।"
+
+msgid "IDS_WCL_TAB_TIME"
+msgstr "সময়"
+
+msgid "IDS_WCL_OPT_REORDER"
+msgstr "পুনঃক্রম করুন"
+
+msgid "IDS_WCL_OPT_DST_SETTINGS"
+msgstr "DST সেটিংস"
+
+msgid "IDS_WCL_OPT_ADDCITY"
+msgstr "শহর যোগ করুন"
+
+msgid "IDS_WCL_HEADER_SELECT_TIME_ZONE"
+msgstr "সময় জোন নির্বাচন করুন"
+
+msgid "IDS_WCL_HEADER_SELECT_CITIES"
+msgstr "শহর নির্বাচন"
+
+msgid "IDS_WCL_BODY_ZIMBABWE_M_COUNTRYNAME"
+msgstr "জিম্বাবোয়ে"
+
+msgid "IDS_WCL_BODY_ZIMBABWE"
+msgstr "জিম্বাবোয়ে"
+
+msgid "IDS_WCL_BODY_ZAMBIA_M_COUNTRYNAME"
+msgstr "জাম্বিয়া"
+
+msgid "IDS_WCL_BODY_ZAMBIA"
+msgstr "জাম্বিয়া"
+
+msgid "IDS_WCL_BODY_YEMEN_M_COUNTRYNAME"
+msgstr "ইয়েমেন"
+
+msgid "IDS_WCL_BODY_YEMEN"
+msgstr "ইয়েমেন"
+
+msgid "IDS_WCL_BODY_YAOUNDE"
+msgstr "ইয়াউন্ডে"
+
+msgid "IDS_WCL_BODY_WALES_M_COUNTRYNAME"
+msgstr "ওয়েল্স"
+
+msgid "IDS_WCL_BODY_VIETNAM_M_COUNTRYNAME"
+msgstr "ভিয়েতনাম"
+
+msgid "IDS_WCL_BODY_VIETNAM"
+msgstr "ভিয়েতনাম"
+
+msgid "IDS_WCL_BODY_VENEZUELA"
+msgstr "ভেনেজুয়েলা"
+
+msgid "IDS_WCL_BODY_UZBEKISTAN_M_COUNTRYNAME"
+msgstr "উজবেকিস্তান"
+
+msgid "IDS_WCL_BODY_UZBEKISTAN"
+msgstr "উজবেকিস্তান"
+
+msgid "IDS_WCL_BODY_USA_M_COUNTRYNAME"
+msgstr "USA"
+
+msgid "IDS_WCL_BODY_URUGUAY_M_COUNTRYNAME"
+msgstr "উরুগুয়ে"
+
+msgid "IDS_WCL_BODY_URUGUAY"
+msgstr "উরুগুয়ে"
+
+msgid "IDS_WCL_BODY_UNITED_STATES_VIRGIN_ISLANDS_M_COUNTRYNAME"
+msgstr "ইউনাইটেড স্টেটস ভার্জিন আইল্যান্ডস"
+
+msgid "IDS_WCL_BODY_UNITED_KINGDOM"
+msgstr "ইউনাইটেড কিংডম"
+
+msgid "IDS_WCL_BODY_UNITED_ARAB_EMIRATES"
+msgstr "ইউনাইটেড আরব ইমিরেটস"
+
+msgid "IDS_WCL_BODY_UKRAINE_M_COUNTRYNAME"
+msgstr "ইউক্রেন"
+
+msgid "IDS_WCL_BODY_UKRAINE"
+msgstr "ইউক্রেন"
+
+msgid "IDS_WCL_BODY_UGANDA_M_COUNTRYNAME"
+msgstr "উগান্ডা"
+
+msgid "IDS_WCL_BODY_UGANDA"
+msgstr "উগান্ডা"
+
+msgid "IDS_WCL_BODY_TURKMENISTAN"
+msgstr "তুর্কমেনিস্তান"
+
+msgid "IDS_WCL_BODY_TURKEY_M_COUNTRYNAME"
+msgstr "তুরস্ক"
+
+msgid "IDS_WCL_BODY_TURKEY"
+msgstr "তুরস্ক"
+
+msgid "IDS_WCL_BODY_TUNISIA_M_COUNTRYNAME"
+msgstr "টিউনিশিয়া"
+
+msgid "IDS_WCL_BODY_TUNISIA"
+msgstr "টিউনিশিয়া"
+
+msgid "IDS_WCL_BODY_TONGA_M_COUNTRYNAME"
+msgstr "টঙ্গা"
+
+msgid "IDS_WCL_BODY_TONGA"
+msgstr "টঙ্গা"
+
+msgid "IDS_WCL_BODY_TIME_ZONE"
+msgstr "সময় জোন"
+
+msgid "IDS_WCL_BODY_THAILAND"
+msgstr "থাইল্যান্ড"
+
+msgid "IDS_WCL_BODY_TANZANIA"
+msgstr "তানজেনিয়া"
+
+msgid "IDS_WCL_BODY_TAJIKISTAN"
+msgstr "তাজিকিস্তান"
+
+msgid "IDS_WCL_BODY_TAIWAN_M_COUNTRYNAME"
+msgstr "তাইওয়ান"
+
+msgid "IDS_WCL_BODY_TAIWAN"
+msgstr "তাইওয়ান"
+
+msgid "IDS_WCL_BODY_SYRIA"
+msgstr "সিরিয়া"
+
+msgid "IDS_WCL_BODY_SWITZERLAND_M_COUNTRYNAME"
+msgstr "সুইজারল্যান্ড"
+
+msgid "IDS_WCL_BODY_SWITZERLAND"
+msgstr "সুইজারল্যান্ড"
+
+msgid "IDS_WCL_BODY_SWEDEN_M_COUNTRYNAME"
+msgstr "সুইডেন"
+
+msgid "IDS_WCL_BODY_SWEDEN"
+msgstr "সুইডেন"
+
+msgid "IDS_WCL_BODY_SURINAME_M_COUNTRYNAME"
+msgstr "সুরিনাম"
+
+msgid "IDS_WCL_BODY_SURINAME"
+msgstr "সুরিনাম"
+
+msgid "IDS_WCL_BODY_SUDAN_M_COUNTRYNAME"
+msgstr "সুদান"
+
+msgid "IDS_WCL_BODY_SUDAN"
+msgstr "সুদান"
+
+msgid "IDS_WCL_BODY_SRI_LANKA"
+msgstr "শ্রীলঙ্কা"
+
+msgid "IDS_WCL_BODY_SPAIN_M_COUNTRYNAME"
+msgstr "স্পেন"
+
+msgid "IDS_WCL_BODY_SPAIN"
+msgstr "স্পেন"
+
+msgid "IDS_WCL_BODY_SOMALIA_M_COUNTRYNAME"
+msgstr "সোমালিয়া"
+
+msgid "IDS_WCL_BODY_SOMALIA"
+msgstr "সোমালিয়া"
+
+msgid "IDS_WCL_BODY_SLOVAKIA_M_COUNTRYNAME"
+msgstr "স্লোভাকিয়া"
+
+msgid "IDS_WCL_BODY_SLOVAKIA"
+msgstr "স্লোভাকিয়া"
+
+msgid "IDS_WCL_BODY_SIERRA_LEONE_M_COUNTRYNAME"
+msgstr "সিয়েরা লিয়োন"
+
+msgid "IDS_WCL_BODY_SIERRA_LEONE"
+msgstr "সিয়েরা লিয়োন"
+
+msgid "IDS_WCL_BODY_SHENZHEN"
+msgstr "শেনঝেন"
+
+msgid "IDS_WCL_BODY_SEYCHELLES_M_COUNTRYNAME"
+msgstr "সিচেলস"
+
+msgid "IDS_WCL_BODY_SEYCHELLES"
+msgstr "সিচেলস"
+
+msgid "IDS_WCL_BODY_SERBIA"
+msgstr "সার্বিয়া"
+
+msgid "IDS_WCL_BODY_SENEGAL"
+msgstr "সেনেগাল"
+
+msgid "IDS_WCL_BODY_SCOTLAND_M_COUNTRYNAME"
+msgstr "স্কটল্যান্ড"
+
+msgid "IDS_WCL_BODY_SAUDI_ARABIA_M_COUNTRYNAME"
+msgstr "সৌদি আরব"
+
+msgid "IDS_WCL_BODY_SAUDI_ARABIA"
+msgstr "সৌদি আরব"
+
+msgid "IDS_WCL_BODY_SAN_JOSE_DEL_CABO"
+msgstr "সান জোস ডেল কাবো"
+
+msgid "IDS_WCL_BODY_SAN_JOSE"
+msgstr "সান জোস"
+
+msgid "IDS_WCL_BODY_RUSSIA_M_COUNTRYNAME"
+msgstr "রাশিয়া"
+
+msgid "IDS_WCL_BODY_RUSSIA"
+msgstr "রাশিয়া"
+
+msgid "IDS_WCL_BODY_ROMANIA"
+msgstr "রোমানিয়া"
+
+msgid "IDS_WCL_BODY_RIGA"
+msgstr "রিগা"
+
+msgid "IDS_WCL_BODY_REUNION_ISLAND_M_COUNTRYNAME"
+msgstr "রিইউনিয়ন আইল্যান্ড"
+
+msgid "IDS_WCL_BODY_REPUBLIC_OF_SOUTH_AFRICA"
+msgstr "দক্ষিন আফ্রিকা"
+
+msgid "IDS_WCL_BODY_REPUBLIC_OF_SINGAPORE_M_COUNTRY"
+msgstr "রিপাবলিক অফ সিঙ্গাপুর"
+
+msgid "IDS_WCL_BODY_REPUBLIC_OF_KOREA"
+msgstr "রিপাবলিক অফ কোরিয়া"
+
+msgid "IDS_WCL_BODY_QATAR"
+msgstr "কাতার"
+
+msgid "IDS_WCL_BODY_PUERTO_RICO_M_COUNTRYNAME"
+msgstr "পুয়ের্তো রিকো"
+
+msgid "IDS_WCL_BODY_PUERTO_RICO"
+msgstr "পুয়ের্তো রিকো"
+
+msgid "IDS_WCL_BODY_PORTUGAL_M_COUNTRYNAME"
+msgstr "পর্তুগাল"
+
+msgid "IDS_WCL_BODY_PORTUGAL"
+msgstr "পর্তুগাল"
+
+msgid "IDS_WCL_BODY_POLAND_M_COUNTRYNAME"
+msgstr "পোল্যান্ড"
+
+msgid "IDS_WCL_BODY_POLAND"
+msgstr "পোল্যান্ড"
+
+msgid "IDS_WCL_BODY_PHILIPPINES_M_COUNTRYNAME"
+msgstr "ফিলিপিন্স"
+
+msgid "IDS_WCL_BODY_PHILIPPINES"
+msgstr "ফিলিপিন্স"
+
+msgid "IDS_WCL_BODY_PERU_M_COUNTRYNAME"
+msgstr "পেরু"
+
+msgid "IDS_WCL_BODY_PERU"
+msgstr "পেরু"
+
+msgid "IDS_WCL_BODY_PARAGUAY"
+msgstr "প্যারাগুয়ে"
+
+msgid "IDS_WCL_BODY_PANAMA_M_COUNTRYNAME"
+msgstr "পানামা"
+
+msgid "IDS_WCL_BODY_PANAMA_CITY"
+msgstr "পানামা সিটি"
+
+msgid "IDS_WCL_BODY_PANAMA"
+msgstr "পানামা"
+
+msgid "IDS_WCL_BODY_PAKISTAN_M_COUNTRYNAME"
+msgstr "পাকিস্তান"
+
+msgid "IDS_WCL_BODY_PAKISTAN"
+msgstr "পাকিস্তান"
+
+msgid "IDS_WCL_BODY_OMAN_M_COUNTRYNAME"
+msgstr "ওমান"
+
+msgid "IDS_WCL_BODY_OMAN"
+msgstr "ওমান"
+
+msgid "IDS_WCL_BODY_NORWAY_M_COUNTRYNAME"
+msgstr "নরওয়ে"
+
+msgid "IDS_WCL_BODY_NORWAY"
+msgstr "নরওয়ে"
+
+msgid "IDS_WCL_BODY_NORTH_KOREA_M_COUNTRYNAME"
+msgstr "উত্তর কোরিয়া"
+
+msgid "IDS_WCL_BODY_NORTH_KOREA"
+msgstr "উত্তর কোরিয়া"
+
+msgid "IDS_WCL_BODY_NIGER_M_COUNTRYNAME"
+msgstr "নাইজার"
+
+msgid "IDS_WCL_BODY_NIGERIA_M_COUNTRYNAME"
+msgstr "নাইজেরিয়া"
+
+msgid "IDS_WCL_BODY_NIGERIA"
+msgstr "নাইজেরিয়া"
+
+msgid "IDS_WCL_BODY_NIGER"
+msgstr "নাইজার"
+
+msgid "IDS_WCL_BODY_NICARAGUA_M_COUNTRYNAME"
+msgstr "নিকারাগুয়া"
+
+msgid "IDS_WCL_BODY_NICARAGUA"
+msgstr "নিকারাগুয়া"
+
+msgid "IDS_WCL_BODY_NEW_ZEALAND_M_COUNTRYNAME"
+msgstr "নিউজিল্যান্ড"
+
+msgid "IDS_WCL_BODY_NEW_ZEALAND"
+msgstr "নিউজিল্যান্ড"
+
+msgid "IDS_WCL_BODY_NEW_CALEDONIA_M_COUNTRYNAME"
+msgstr "নিউ ক্যালেডনিয়া"
+
+msgid "IDS_WCL_BODY_NEW_CALEDONIA"
+msgstr "নিউ ক্যালেডনিয়া"
+
+msgid "IDS_WCL_BODY_NETHERLANDS_M_COUNTRYNAME"
+msgstr "নেদারল্যান্ডস"
+
+msgid "IDS_WCL_BODY_NETHERLANDS_ANTILLES_M_COUNTRYNAME"
+msgstr "নেদারল্যান্ডস অ্যান্টিলেস"
+
+msgid "IDS_WCL_BODY_NETHERLANDS"
+msgstr "নেদারল্যান্ডস"
+
+msgid "IDS_WCL_BODY_NEPAL_M_COUNTRYNAME"
+msgstr "নেপাল"
+
+msgid "IDS_WCL_BODY_NEPAL"
+msgstr "নেপাল"
+
+msgid "IDS_WCL_BODY_MOZAMBIQUE_M_COUNTRYNAME"
+msgstr "মোজাম্বিক"
+
+msgid "IDS_WCL_BODY_MOZAMBIQUE"
+msgstr "মোজাম্বিক"
+
+msgid "IDS_WCL_BODY_MOROCCO_M_COUNTRYNAME"
+msgstr "মরক্কো"
+
+msgid "IDS_WCL_BODY_MOROCCO"
+msgstr "মরক্কো"
+
+msgid "IDS_WCL_BODY_MONTENEGRO_M_COUNTRYNAME"
+msgstr "মন্টিনিগ্রো"
+
+msgid "IDS_WCL_BODY_MONTENEGRO"
+msgstr "মন্টিনিগ্রো"
+
+msgid "IDS_WCL_BODY_MONGOLIA_M_COUNTRYNAME"
+msgstr "মঙ্গোলিয়া"
+
+msgid "IDS_WCL_BODY_MONGOLIA"
+msgstr "মঙ্গোলিয়া"
+
+msgid "IDS_WCL_BODY_MOLDOVA_M_COUNTRYNAME"
+msgstr "মলডোভা"
+
+msgid "IDS_WCL_BODY_MOLDOVA"
+msgstr "মলডোভা"
+
+msgid "IDS_WCL_BODY_MEXICO_M_COUNTRYNAME"
+msgstr "মেক্সিকো"
+
+msgid "IDS_WCL_BODY_MEXICO_CITY"
+msgstr "GMT-6(মেক্সিকো_সিটি)"
+
+msgid "IDS_WCL_BODY_MEXICO"
+msgstr "মেক্সিকো"
+
+msgid "IDS_WCL_BODY_MECCA"
+msgstr "মেক্কা"
+
+msgid "IDS_WCL_BODY_MAURITIUS_M_COUNTRYNAME"
+msgstr "মরিশাস"
+
+msgid "IDS_WCL_BODY_MAURITIUS"
+msgstr "মরিশাস"
+
+msgid "IDS_WCL_BODY_MAURITANIA_M_COUNTRYNAME"
+msgstr "মরিতানিয়া"
+
+msgid "IDS_WCL_BODY_MAURITANIA"
+msgstr "মরিতানিয়া"
+
+msgid "IDS_WCL_BODY_MARTINIQUE"
+msgstr "মার্টিনিক"
+
+msgid "IDS_WCL_BODY_MALTA_M_COUNTRYNAME"
+msgstr "মল্টা"
+
+msgid "IDS_WCL_BODY_MALTA"
+msgstr "মল্টা"
+
+msgid "IDS_WCL_BODY_MALI"
+msgstr "মালি"
+
+msgid "IDS_WCL_BODY_MALDIVES_M_COUNTRYNAME"
+msgstr "মলডিভস"
+
+msgid "IDS_WCL_BODY_MALDIVES"
+msgstr "মলডিভস"
+
+msgid "IDS_WCL_BODY_MALAYSIA_M_COUNTRYNAME"
+msgstr "মালয়েশিয়া"
+
+msgid "IDS_WCL_BODY_MALAYSIA"
+msgstr "মালয়েশিয়া"
+
+msgid "IDS_WCL_BODY_MADAGASCAR"
+msgstr "মাদাগাসকর"
+
+msgid "IDS_WCL_BODY_MACEDONIA_M_COUNTRYNAME"
+msgstr "ম্যাসিডনিয়া"
+
+msgid "IDS_WCL_BODY_MACEDONIA"
+msgstr "ম্যাসিডনিয়া"
+
+msgid "IDS_WCL_BODY_LUXEMBOURG_M_COUNTRYNAME"
+msgstr "লাক্সেমবার্গ"
+
+msgid "IDS_WCL_BODY_LUXEMBOURG"
+msgstr "লাক্সেমবার্গ"
+
+msgid "IDS_WCL_BODY_LITHUANIA_M_COUNTRYNAME"
+msgstr "লিথুয়ানিয়া"
+
+msgid "IDS_WCL_BODY_LITHUANIA"
+msgstr "লিথুয়ানিয়া"
+
+msgid "IDS_WCL_BODY_LIECHTENSTEIN_M_COUNTRYNAME"
+msgstr "লিচেনস্টাইন"
+
+msgid "IDS_WCL_BODY_LIECHTENSTEIN"
+msgstr "লিচেনস্টাইন"
+
+msgid "IDS_WCL_BODY_LIBYA_M_COUNTRYNAME"
+msgstr "লিবিয়া"
+
+msgid "IDS_WCL_BODY_LIBYA"
+msgstr "লিবিয়া"
+
+msgid "IDS_WCL_BODY_LIBERIA_M_COUNTRYNAME"
+msgstr "লাইবেরিয়া"
+
+msgid "IDS_WCL_BODY_LIBERIA"
+msgstr "লাইবেরিয়া"
+
+msgid "IDS_WCL_BODY_LEBANON"
+msgstr "লেবানন"
+
+msgid "IDS_WCL_BODY_LATVIA_M_COUNTRYNAME"
+msgstr "লাটভিয়া"
+
+msgid "IDS_WCL_BODY_LATVIA"
+msgstr "লাটভিয়া"
+
+msgid "IDS_WCL_BODY_KYRGYZSTAN"
+msgstr "কিরগিজস্তান"
+
+msgid "IDS_WCL_BODY_KUWAIT_M_COUNTRYNAME"
+msgstr "কুয়েত"
+
+msgid "IDS_WCL_BODY_KUWAIT"
+msgstr "কুয়েত"
+
+msgid "IDS_WCL_BODY_KIRIBATI_M_COUNTRYNAME"
+msgstr "কিরিবাটি"
+
+msgid "IDS_WCL_BODY_KIRIBATI"
+msgstr "কিরিবাটি"
+
+msgid "IDS_WCL_BODY_KIEV_MINSK_RIGA_TALLINN_VILNIUS_LVIV_KHARKIV_ATHENS_HELSINKI_ISTANBUL"
+msgstr "কিয়েভ, মিনস্ক, রিগা, তালিন, ভিলনিয়াস, লভিভ, খারকিভ, এথেন্স, হেলসিঙ্কি, ইস্তানবুল"
+
+msgid "IDS_WCL_BODY_KENYA_M_COUNTRYNAME"
+msgstr "কেনিয়া"
+
+msgid "IDS_WCL_BODY_KENYA"
+msgstr "কেনিয়া"
+
+msgid "IDS_WCL_BODY_KAZAKHSTAN_M_COUNTRYNAME"
+msgstr "কাজাখস্তান"
+
+msgid "IDS_WCL_BODY_KAZAKHSTAN"
+msgstr "কাজাখস্তান"
+
+msgid "IDS_WCL_BODY_KALININGRAD_KYIV_MINSK_RIGA_TALLINN_VILNIUS_LVIV_KHARKIV_ATHENS_HELSINKI_ISTANBUL"
+msgstr "কালিনিনগাড়, কাইভ, মিনস্ক, রিগা, তাল্লিন, ভিলনিয়াস, লিভিব, খারকিভ, এথেন্স, হেলসিঙ্কি, ইস্তানবুল"
+
+msgid "IDS_WCL_BODY_JORDAN_M_COUNTRYNAME"
+msgstr "জর্ডন"
+
+msgid "IDS_WCL_BODY_JORDAN"
+msgstr "জর্ডন"
+
+msgid "IDS_WCL_BODY_JAPAN_M_COUNTRYNAME"
+msgstr "জাপান"
+
+msgid "IDS_WCL_BODY_JAPAN"
+msgstr "জাপান"
+
+msgid "IDS_WCL_BODY_JAMAICA_M_COUNTRYNAME"
+msgstr "জামাইকা"
+
+msgid "IDS_WCL_BODY_JAMAICA"
+msgstr "জামাইকা"
+
+msgid "IDS_WCL_BODY_ITALY_M_COUNTRYNAME"
+msgstr "ইটালি"
+
+msgid "IDS_WCL_BODY_ITALY"
+msgstr "ইটালি"
+
+msgid "IDS_WCL_BODY_ISRAEL_M_COUNTRYNAME"
+msgstr "ইজরায়েল"
+
+msgid "IDS_WCL_BODY_ISRAEL"
+msgstr "ইজরায়েল"
+
+msgid "IDS_WCL_BODY_IRELAND"
+msgstr "আয়ারল্যান্ড"
+
+msgid "IDS_WCL_BODY_IRAQ"
+msgstr "ইরাক"
+
+msgid "IDS_WCL_BODY_IRAN_M_COUNTRYNAME"
+msgstr "ইরান"
+
+msgid "IDS_WCL_BODY_INDONESIA_M_COUNTRYNAME"
+msgstr "ইন্দোনেশিয়া"
+
+msgid "IDS_WCL_BODY_INDONESIA"
+msgstr "ইন্দোনেশিয়া"
+
+msgid "IDS_WCL_BODY_INDIA_M_COUNTRYNAME"
+msgstr "ভারত"
+
+msgid "IDS_WCL_BODY_INDIANAPOLIS"
+msgstr "ইন্ডিয়ানাপলিস"
+
+msgid "IDS_WCL_BODY_INDIANAEAST"
+msgstr "GMT-5(ইন্ডিয়ানা পূর্ব)"
+
+msgid "IDS_WCL_BODY_INDIA"
+msgstr "ভারত"
+
+msgid "IDS_WCL_BODY_ICELAND_M_COUNTRYNAME"
+msgstr "আইসল্যান্ড"
+
+msgid "IDS_WCL_BODY_ICELAND"
+msgstr "আইসল্যান্ড"
+
+msgid "IDS_WCL_BODY_HYDERABAD"
+msgstr "হায়দ্রাবাদ"
+
+msgid "IDS_WCL_BODY_HUNGARY_M_COUNTRYNAME"
+msgstr "হাঙ্গেরি"
+
+msgid "IDS_WCL_BODY_HUNGARY_M_COUNTRY"
+msgstr "হাঙ্গেরি"
+
+msgid "IDS_WCL_BODY_HONDURAS_M_COUNTRYNAME"
+msgstr "হন্ডুরাস"
+
+msgid "IDS_WCL_BODY_HONDURAS"
+msgstr "হন্ডুরাস"
+
+msgid "IDS_WCL_BODY_HAITI_M_COUNTRYNAME"
+msgstr "হাইটি"
+
+msgid "IDS_WCL_BODY_HAITI"
+msgstr "হাইটি"
+
+msgid "IDS_WCL_BODY_HAIKOU"
+msgstr "হাইকু"
+
+msgid "IDS_WCL_BODY_GUYANA"
+msgstr "গুয়ানা"
+
+msgid "IDS_WCL_BODY_GUINEA"
+msgstr "গিনি"
+
+msgid "IDS_WCL_BODY_GUATEMALA_M_COUNTRYNAME"
+msgstr "গুয়াতেমালা"
+
+msgid "IDS_WCL_BODY_GUATEMALA_CITY"
+msgstr "গুয়াতেমালা সিটি"
+
+msgid "IDS_WCL_BODY_GUATEMALA"
+msgstr "গুয়াতেমালা"
+
+msgid "IDS_WCL_BODY_GUANGZHOU"
+msgstr "গুয়াংঝাউ"
+
+msgid "IDS_WCL_BODY_GUADELOUPE"
+msgstr "গুয়াডেলুপ"
+
+msgid "IDS_WCL_BODY_GREENLAND_M_COUNTRYNAME"
+msgstr "গ্রীনল্যান্ড"
+
+msgid "IDS_WCL_BODY_GREECE"
+msgstr "গ্রীস"
+
+msgid "IDS_WCL_BODY_GHANA_M_COUNTRYNAME"
+msgstr "ঘানা"
+
+msgid "IDS_WCL_BODY_GHANA"
+msgstr "ঘানা"
+
+msgid "IDS_WCL_BODY_GERMANY_M_COUNTRYNAME"
+msgstr "জার্মানি"
+
+msgid "IDS_WCL_BODY_GERMANY"
+msgstr "জার্মানি"
+
+msgid "IDS_WCL_BODY_GEORGIA_M_COUNTRYNAME"
+msgstr "জর্জিয়া"
+
+msgid "IDS_WCL_BODY_GEORGIA"
+msgstr "জর্জিয়া"
+
+msgid "IDS_WCL_BODY_FRENCH_POLYNESIA_M_COUNTRYNAME"
+msgstr "ফ্রেঞ্চ পলিনেশিয়া"
+
+msgid "IDS_WCL_BODY_FRENCH_POLYNESIA"
+msgstr "ফ্রেঞ্চ পলিনেশিয়া"
+
+msgid "IDS_WCL_BODY_FRENCH_GUIANA"
+msgstr "ফ্রেঞ্চ গায়না"
+
+msgid "IDS_WCL_BODY_FRANCE_M_COUNTRYNAME"
+msgstr "ফ্রান্স"
+
+msgid "IDS_WCL_BODY_FRANCEVILLE"
+msgstr "ফ্রান্সভিল"
+
+msgid "IDS_WCL_BODY_FRANCE"
+msgstr "ফ্রান্স"
+
+msgid "IDS_WCL_BODY_FINLAND_M_COUNTRYNAME"
+msgstr "ফিনল্যান্ড"
+
+msgid "IDS_WCL_BODY_FINLAND"
+msgstr "ফিনল্যান্ড"
+
+msgid "IDS_WCL_BODY_FIJI_M_COUNTRYNAME"
+msgstr "ফিজি"
+
+msgid "IDS_WCL_BODY_ETHIOPIA_M_COUNTRYNAME"
+msgstr "ইথিওপিয়া"
+
+msgid "IDS_WCL_BODY_ETHIOPIA"
+msgstr "ইথিওপিয়া"
+
+msgid "IDS_WCL_BODY_ESTONIA_M_COUNTRYNAME"
+msgstr "এস্টোনিয়া"
+
+msgid "IDS_WCL_BODY_ESTONIA"
+msgstr "এস্টোনিয়া"
+
+msgid "IDS_WCL_BODY_ERITREA"
+msgstr "এরিট্রিয়া"
+
+msgid "IDS_WCL_BODY_EL_SALVADOR_M_COUNTRYNAME"
+msgstr "এল সালভাডর"
+
+msgid "IDS_WCL_BODY_EL_SALVADOR"
+msgstr "এল সালভাডর"
+
+msgid "IDS_WCL_BODY_EGYPT"
+msgstr "মিশর"
+
+msgid "IDS_WCL_BODY_ECUADOR_M_COUNTRYNAME"
+msgstr "ইকুয়েডর"
+
+msgid "IDS_WCL_BODY_ECUADOR"
+msgstr "ইকুয়েডর"
+
+msgid "IDS_WCL_BODY_DOMINICAN_REPUBLIC_M_COUNTRYNAME"
+msgstr "ডোমিনিকান রিপাবলিক"
+
+msgid "IDS_WCL_BODY_DOMINICAN_REPUBLIC"
+msgstr "ডোমিনিকান রিপাবলিক"
+
+msgid "IDS_WCL_BODY_DJIBOUTI"
+msgstr "জিবুতি"
+
+msgid "IDS_WCL_BODY_DENMARK"
+msgstr "ডেনমার্ক"
+
+msgid "IDS_WCL_BODY_DEMOCRATIC_REPUBLIC_OF_THE_CONGO"
+msgstr "ডেমক্রেটিক রিপাবলিক অফ দ্য কঙ্গো"
+
+msgid "IDS_WCL_BODY_CZECH_REPUBLIC_M_COUNTRYNAME"
+msgstr "চেক রিপাবলিক"
+
+msgid "IDS_WCL_BODY_CZECH_REPUBLIC"
+msgstr "চেক রিপাবলিক"
+
+msgid "IDS_WCL_BODY_CUBA_M_COUNTRYNAME"
+msgstr "কিউবা"
+
+msgid "IDS_WCL_BODY_CUBA"
+msgstr "কিউবা"
+
+msgid "IDS_WCL_BODY_CROATIA_M_COUNTRYNAME"
+msgstr "ক্রোয়েশিয়া"
+
+msgid "IDS_WCL_BODY_CROATIA"
+msgstr "ক্রোয়েশিয়া"
+
+msgid "IDS_WCL_BODY_COTE_DIVOIRE_M_COUNTRYNAME"
+msgstr "কোটে ডি'আইভরি"
+
+msgid "IDS_WCL_BODY_COTE_DIVOIRE"
+msgstr "কোটে ডি’আইভয়ের"
+
+msgid "IDS_WCL_BODY_COSTA_RICA_M_COUNTRYNAME"
+msgstr "কস্টা রিকা"
+
+msgid "IDS_WCL_BODY_COSTA_RICA"
+msgstr "কস্টা রিকা"
+
+msgid "IDS_WCL_BODY_COLOMBIA"
+msgstr "কলম্বিয়া"
+
+msgid "IDS_WCL_BODY_CITYNAME_ZURICH"
+msgstr "জুরিখ"
+
+msgid "IDS_WCL_BODY_CITYNAME_ZAGREB"
+msgstr "জাগরেব"
+
+msgid "IDS_WCL_BODY_CITYNAME_YUZHNO_SAKHALINSK"
+msgstr "ইউজনো-শাকালিনস্ক"
+
+msgid "IDS_WCL_BODY_CITYNAME_YEREVAN"
+msgstr "ইয়েরেভান"
+
+msgid "IDS_WCL_BODY_CITYNAME_YEKATERINBURG"
+msgstr "ইয়েকতেরিনবুর্গ"
+
+msgid "IDS_WCL_BODY_CITYNAME_YANGON"
+msgstr "ইয়াঙ্গন"
+
+msgid "IDS_WCL_BODY_CITYNAME_YAMOUSSOUKRO"
+msgstr "ইয়ামুসুক্রো"
+
+msgid "IDS_WCL_BODY_CITYNAME_YAKUTSK"
+msgstr "ইয়াকুতস্ক"
+
+msgid "IDS_WCL_BODY_CITYNAME_WINNIPEG"
+msgstr "উইনিপেগ"
+
+msgid "IDS_WCL_BODY_CITYNAME_WELLINGTON"
+msgstr "ওয়েলিংটন"
+
+msgid "IDS_WCL_BODY_CITYNAME_WASHINGTON_DC"
+msgstr "ওয়াশিংটন DC"
+
+msgid "IDS_WCL_BODY_CITYNAME_WARSAW"
+msgstr "ওয়ারশ"
+
+msgid "IDS_WCL_BODY_CITYNAME_VOLGOGRAD"
+msgstr "ভলগাগ্রাদ"
+
+msgid "IDS_WCL_BODY_CITYNAME_VLADIVOSTOK"
+msgstr "ভ্লাডিভোস্টক"
+
+msgid "IDS_WCL_BODY_CITYNAME_VILNIUS"
+msgstr "ভিলনিয়াস"
+
+msgid "IDS_WCL_BODY_CITYNAME_VIENNA"
+msgstr "ভিয়েনা"
+
+msgid "IDS_WCL_BODY_CITYNAME_VICTORIA"
+msgstr "ভিক্টোরিয়া"
+
+msgid "IDS_WCL_BODY_CITYNAME_VERONA"
+msgstr "ভেরোনা"
+
+msgid "IDS_WCL_BODY_CITYNAME_VANCOUVER"
+msgstr "ভ্যাঙ্কুবার"
+
+msgid "IDS_WCL_BODY_CITYNAME_VALLETTA"
+msgstr "ভ্যালেট্টা"
+
+msgid "IDS_WCL_BODY_CITYNAME_VADUZ"
+msgstr "ভাদুস"
+
+msgid "IDS_WCL_BODY_CITYNAME_ULAN_BATOR"
+msgstr "উলান বাটোর"
+
+msgid "IDS_WCL_BODY_CITYNAME_UFA"
+msgstr "উফা"
+
+msgid "IDS_WCL_BODY_CITYNAME_TURIN"
+msgstr "তুরিন"
+
+msgid "IDS_WCL_BODY_CITYNAME_TUNIS"
+msgstr "টিউনিস"
+
+msgid "IDS_WCL_BODY_CITYNAME_TRIPOLI"
+msgstr "ত্রিপোলি"
+
+msgid "IDS_WCL_BODY_CITYNAME_TORONTO"
+msgstr "টরেন্টো"
+
+msgid "IDS_WCL_BODY_CITYNAME_TOKYO"
+msgstr "টোকিয়া"
+
+msgid "IDS_WCL_BODY_CITYNAME_TIJUANA"
+msgstr "তিজুয়ানা"
+
+msgid "IDS_WCL_BODY_CITYNAME_TIANJIN"
+msgstr "তিয়েন্তজিন"
+
+msgid "IDS_WCL_BODY_CITYNAME_THE_SETTLEMENT"
+msgstr "দ্য সেটেলমেন্ট"
+
+msgid "IDS_WCL_BODY_CITYNAME_TEHRAN"
+msgstr "তেহেরান"
+
+msgid "IDS_WCL_BODY_CITYNAME_TEGUCIGALPA"
+msgstr "টেগুসাগ্যালপা"
+
+msgid "IDS_WCL_BODY_CITYNAME_TBILISI"
+msgstr "তুবলিসি"
+
+msgid "IDS_WCL_BODY_CITYNAME_TASHKENT"
+msgstr "তাসখন্দ"
+
+msgid "IDS_WCL_BODY_CITYNAME_TARAWA"
+msgstr "তারাওয়া"
+
+msgid "IDS_WCL_BODY_CITYNAME_TALLINN"
+msgstr "তালিন"
+
+msgid "IDS_WCL_BODY_CITYNAME_TAIPEI_HONG_KONG"
+msgstr "টাইপেই, হংকং"
+
+msgid "IDS_WCL_BODY_CITYNAME_TAIPEI"
+msgstr "তাইপেই"
+
+msgid "IDS_WCL_BODY_CITYNAME_TAHITI"
+msgstr "তাহিতি"
+
+msgid "IDS_WCL_BODY_CITYNAME_SYDNEY"
+msgstr "সিডনি"
+
+msgid "IDS_WCL_BODY_CITYNAME_SUVA"
+msgstr "সুভা"
+
+msgid "IDS_WCL_BODY_CITYNAME_ST_PETERSBURG_VOLGOGRAD_JEDDAH_NAIROBI_IZHEVSK"
+msgstr "সেইন্ট পিটার্সবার্গ, ভল্গোগ্রাড, জেডাহ্, নাইরবি, ইজেভস্ক"
+
+msgid "IDS_WCL_BODY_CITYNAME_ST_PETERSBURG"
+msgstr "সেন্ট পিটার্সবার্গ"
+
+msgid "IDS_WCL_BODY_CITYNAME_ST_JOHNS"
+msgstr "সেন্ট জনের"
+
+msgid "IDS_WCL_BODY_CITYNAME_STOCKHOLM"
+msgstr "স্টকহোম"
+
+msgid "IDS_WCL_BODY_CITYNAME_SOUTH_GEORGIA"
+msgstr "সাউথ জর্জিয়া"
+
+msgid "IDS_WCL_BODY_CITYNAME_SOFIA"
+msgstr "সোফিয়া"
+
+msgid "IDS_WCL_BODY_CITYNAME_SKOPJE"
+msgstr "স্কপিয়ে"
+
+msgid "IDS_WCL_BODY_CITYNAME_SINGAPORE_KUALA_LUMPUR_MANILA"
+msgstr "সিঙ্গাপুর, কুয়ালা লামপুর, মানিলা"
+
+msgid "IDS_WCL_BODY_CITYNAME_SINGAPORE"
+msgstr "সিঙ্গাপুর"
+
+msgid "IDS_WCL_BODY_CITYNAME_SHANGHAI"
+msgstr "সাংহাই"
+
+msgid "IDS_WCL_BODY_CITYNAME_SEOUL"
+msgstr "সিওল"
+
+msgid "IDS_WCL_BODY_CITYNAME_SEATTLE"
+msgstr "সিয়েটল"
+
+msgid "IDS_WCL_BODY_CITYNAME_SAO_PAULO"
+msgstr "সাও পলো"
+
+msgid "IDS_WCL_BODY_CITYNAME_SAN_SALVADOR_DE_JUJUY"
+msgstr "সান সালভাডর ডি জুজুয়ে"
+
+msgid "IDS_WCL_BODY_CITYNAME_SAN_SALVADOR"
+msgstr "স্যান স্যালভাডর"
+
+msgid "IDS_WCL_BODY_CITYNAME_SAN_MARINO"
+msgstr "সান মারিনো"
+
+msgid "IDS_WCL_BODY_CITYNAME_SAN_JUAN"
+msgstr "সান জুয়ান"
+
+msgid "IDS_WCL_BODY_CITYNAME_SAN_FRANCISCO"
+msgstr "সান ফ্রানসিসকো"
+
+msgid "IDS_WCL_BODY_CITYNAME_SAN_DIEGO"
+msgstr "সান ডিয়েগো"
+
+msgid "IDS_WCL_BODY_CITYNAME_SAN_ANTONIO"
+msgstr "সান অ্যান্টনিও"
+
+msgid "IDS_WCL_BODY_CITYNAME_SANTO_DOMINGO"
+msgstr "স্যান্টো ডমিঙ্গো"
+
+msgid "IDS_WCL_BODY_CITYNAME_SANTIAGO_DE_GUAYAQUIL"
+msgstr "স্যান্টিয়াগো ডি গুয়াকিল"
+
+msgid "IDS_WCL_BODY_CITYNAME_SANTIAGO"
+msgstr "স্যান্টিয়াগো"
+
+msgid "IDS_WCL_BODY_CITYNAME_SANAA"
+msgstr "সানা'আ"
+
+msgid "IDS_WCL_BODY_CITYNAME_SAMARA"
+msgstr "সামারা"
+
+msgid "IDS_WCL_BODY_CITYNAME_SAINT_MARTIN"
+msgstr "সেন্ট মার্টিন"
+
+msgid "IDS_WCL_BODY_CITYNAME_SAINT_DENIS"
+msgstr "সেন্ট-ডেনিস"
+
+msgid "IDS_WCL_BODY_CITYNAME_SAINT_BARTHELEMY"
+msgstr "সেন্ট বার্থেলেমি"
+
+msgid "IDS_WCL_BODY_CITYNAME_ROME"
+msgstr "রোম"
+
+msgid "IDS_WCL_BODY_CITYNAME_RIYADH"
+msgstr "রিয়াধ"
+
+msgid "IDS_WCL_BODY_CITYNAME_RIO_DE_JANEIRO"
+msgstr "রায়ও ডি জানেরিও"
+
+msgid "IDS_WCL_BODY_CITYNAME_RIGA"
+msgstr "রিগা"
+
+msgid "IDS_WCL_BODY_CITYNAME_REYKJAVIK"
+msgstr "রিকজাভিক"
+
+msgid "IDS_WCL_BODY_CITYNAME_REGINA"
+msgstr "রেজিনা"
+
+msgid "IDS_WCL_BODY_CITYNAME_RECIFE"
+msgstr "রিসাইফ"
+
+msgid "IDS_WCL_BODY_CITYNAME_RABAT"
+msgstr "রাবাত"
+
+msgid "IDS_WCL_BODY_CITYNAME_QUITO"
+msgstr "কুইটো"
+
+msgid "IDS_WCL_BODY_CITYNAME_PYONGYANG"
+msgstr "পিয়ংইয়ং"
+
+msgid "IDS_WCL_BODY_CITYNAME_PRAGUE"
+msgstr "প্রেগ"
+
+msgid "IDS_WCL_BODY_CITYNAME_PORT_LOUIS"
+msgstr "পোর্ট লুই"
+
+msgid "IDS_WCL_BODY_CITYNAME_PORT_AU_PRINCE"
+msgstr "পোর্ট-ও-প্রিন্স"
+
+msgid "IDS_WCL_BODY_CITYNAME_PORTLAND"
+msgstr "পোর্টল্যান্ড"
+
+msgid "IDS_WCL_BODY_CITYNAME_PONTA_DELGADA"
+msgstr "পন্টা ডেলগাডা"
+
+msgid "IDS_WCL_BODY_CITYNAME_PODGORICA"
+msgstr "পডগোরিকা"
+
+msgid "IDS_WCL_BODY_CITYNAME_PHOENIX"
+msgstr "ফিনিক্স"
+
+msgid "IDS_WCL_BODY_CITYNAME_PHNOM_PENH"
+msgstr "পেনম পেন"
+
+msgid "IDS_WCL_BODY_CITYNAME_PHILADELPHIA"
+msgstr "ফিলাডেলফিয়া"
+
+msgid "IDS_WCL_BODY_CITYNAME_PETROPAVLOVSK_KAMCHATSKIY"
+msgstr "পেট্রোপ্যাভলোস্ক-ক্যামট্যাটস্কি"
+
+msgid "IDS_WCL_BODY_CITYNAME_PERTH"
+msgstr "পার্থ"
+
+msgid "IDS_WCL_BODY_CITYNAME_PERM"
+msgstr "পার্ম"
+
+msgid "IDS_WCL_BODY_CITYNAME_PARIS"
+msgstr "প্যারিস"
+
+msgid "IDS_WCL_BODY_CITYNAME_PARAMARIBO"
+msgstr "প্যারামারিবো"
+
+msgid "IDS_WCL_BODY_CITYNAME_PALERMO"
+msgstr "পালের্মো"
+
+msgid "IDS_WCL_BODY_CITYNAME_PAGO_PAGO"
+msgstr "পাগো পাগো"
+
+msgid "IDS_WCL_BODY_CITYNAME_OUAGADOUGOU"
+msgstr "ওয়াগেডুগু"
+
+msgid "IDS_WCL_BODY_CITYNAME_OTTAWA"
+msgstr "ওটাওয়া"
+
+msgid "IDS_WCL_BODY_CITYNAME_OSLO"
+msgstr "অসলো"
+
+msgid "IDS_WCL_BODY_CITYNAME_OSAKA"
+msgstr "ওসাকা"
+
+msgid "IDS_WCL_BODY_CITYNAME_OMSK"
+msgstr "ওমস্ক"
+
+msgid "IDS_WCL_BODY_CITYNAME_NUUK"
+msgstr "নুক"
+
+msgid "IDS_WCL_BODY_CITYNAME_NUKUALOFA"
+msgstr "নুকুয়ালোফা"
+
+msgid "IDS_WCL_BODY_CITYNAME_NOVOSIBIRSK"
+msgstr "নোভোসিবার্স্ক"
+
+msgid "IDS_WCL_BODY_CITYNAME_NOVOKUZNETSK"
+msgstr "নোভোকুজনেতস্ক"
+
+msgid "IDS_WCL_BODY_CITYNAME_NOUMEA"
+msgstr "নওমি"
+
+msgid "IDS_WCL_BODY_CITYNAME_NOUAKCHOTT"
+msgstr "নোয়াকশট"
+
+msgid "IDS_WCL_BODY_CITYNAME_NIAMEY"
+msgstr "নিয়ামে"
+
+msgid "IDS_WCL_BODY_CITYNAME_NEWYORK"
+msgstr "নিউ ইয়র্ক"
+
+msgid "IDS_WCL_BODY_CITYNAME_NEWFOUNDLAND"
+msgstr "নিউফাউন্ডল্যান্ড"
+
+msgid "IDS_WCL_BODY_CITYNAME_NEWDELHI"
+msgstr "নিউ দিল্লী"
+
+msgid "IDS_WCL_BODY_CITYNAME_NDJAMENA"
+msgstr "এনজামেনা"
+
+msgid "IDS_WCL_BODY_CITYNAME_NATERS"
+msgstr "নাতের্স"
+
+msgid "IDS_WCL_BODY_CITYNAME_NAPLES"
+msgstr "নাপোলি"
+
+msgid "IDS_WCL_BODY_CITYNAME_NAIROBI"
+msgstr "নাইরবি"
+
+msgid "IDS_WCL_BODY_CITYNAME_MUSCAT"
+msgstr "মাসকাট"
+
+msgid "IDS_WCL_BODY_CITYNAME_MUNICH"
+msgstr "মিউনিখ"
+
+msgid "IDS_WCL_BODY_CITYNAME_MUMBAI"
+msgstr "মুম্বাই"
+
+msgid "IDS_WCL_BODY_CITYNAME_MOSCOW_SAMARA_BAKU_TBILISI_YEREVAN_ABU_DHABI"
+msgstr "মস্কো, সামারা, বাকু, টিলিসি, ইয়েরেভ্যান, আবু ধাবি"
+
+msgid "IDS_WCL_BODY_CITYNAME_MOSCOW"
+msgstr "মস্কো"
+
+msgid "IDS_WCL_BODY_CITYNAME_MONTREAL"
+msgstr "মন্ট্রিল"
+
+msgid "IDS_WCL_BODY_CITYNAME_MONTEVIDEO"
+msgstr "মন্টিভিডিও"
+
+msgid "IDS_WCL_BODY_CITYNAME_MONROVIA"
+msgstr "মনরোভিয়া"
+
+msgid "IDS_WCL_BODY_CITYNAME_MOGADISHU"
+msgstr "মোগাডিশু"
+
+msgid "IDS_WCL_BODY_CITYNAME_MINSK"
+msgstr "মিনস্ক"
+
+msgid "IDS_WCL_BODY_CITYNAME_MILWAUKEE"
+msgstr "মিলউকি"
+
+msgid "IDS_WCL_BODY_CITYNAME_MILAN"
+msgstr "মিলান"
+
+msgid "IDS_WCL_BODY_CITYNAME_MID_ATLANTIC"
+msgstr "মধ্য-আটলান্টিক"
+
+msgid "IDS_WCL_BODY_CITYNAME_MIDWAY_ATOLL"
+msgstr "মিডওয়ে অ্যাটল"
+
+msgid "IDS_WCL_BODY_CITYNAME_MIAMI"
+msgstr "মিয়ামি"
+
+msgid "IDS_WCL_BODY_CITYNAME_MEXICO_CITY"
+msgstr "মেক্সিকো সিটি"
+
+msgid "IDS_WCL_BODY_CITYNAME_MESSINA"
+msgstr "মেসিনা"
+
+msgid "IDS_WCL_BODY_CITYNAME_MEMPHIS"
+msgstr "মেমফিস"
+
+msgid "IDS_WCL_BODY_CITYNAME_MELBOURNE"
+msgstr "মেলবোর্ন"
+
+msgid "IDS_WCL_BODY_CITYNAME_MAZATLAN"
+msgstr "মাজাতলান"
+
+msgid "IDS_WCL_BODY_CITYNAME_MARIGOT"
+msgstr "ম্যারিগট"
+
+msgid "IDS_WCL_BODY_CITYNAME_MAPUTO"
+msgstr "মাপুটো"
+
+msgid "IDS_WCL_BODY_CITYNAME_MANILA"
+msgstr "মানিলা"
+
+msgid "IDS_WCL_BODY_CITYNAME_MANAMA"
+msgstr "মানামা"
+
+msgid "IDS_WCL_BODY_CITYNAME_MANAGUA"
+msgstr "মানাগুয়া"
+
+msgid "IDS_WCL_BODY_CITYNAME_MALE"
+msgstr "মালে"
+
+msgid "IDS_WCL_BODY_CITYNAME_MALABO"
+msgstr "মালাবো"
+
+msgid "IDS_WCL_BODY_CITYNAME_MAGADAN"
+msgstr "ম্যাগাদান"
+
+msgid "IDS_WCL_BODY_CITYNAME_MADRID"
+msgstr "মাদ্রিদ"
+
+msgid "IDS_WCL_BODY_CITYNAME_MACAU"
+msgstr "ম্যাকাও"
+
+msgid "IDS_WCL_BODY_CITYNAME_LVIV"
+msgstr "লভিভ"
+
+msgid "IDS_WCL_BODY_CITYNAME_LUSAKA"
+msgstr "লুসাকা"
+
+msgid "IDS_WCL_BODY_CITYNAME_LUBUMBASHI"
+msgstr "লুম্বুববাসী"
+
+msgid "IDS_WCL_BODY_CITYNAME_LUANDA"
+msgstr "লুয়ান্ডা"
+
+msgid "IDS_WCL_BODY_CITYNAME_LOUISVILLE"
+msgstr "লুইভিল"
+
+msgid "IDS_WCL_BODY_CITYNAME_LOS_ANGELES"
+msgstr "লস এঞ্জেলস"
+
+msgid "IDS_WCL_BODY_CITYNAME_LONDON"
+msgstr "লন্ডন"
+
+msgid "IDS_WCL_BODY_CITYNAME_LJUBLJANA"
+msgstr "লাবলিয়ানা"
+
+msgid "IDS_WCL_BODY_CITYNAME_LISBON"
+msgstr "লিসবন"
+
+msgid "IDS_WCL_BODY_CITYNAME_LIMA"
+msgstr "লিমা"
+
+msgid "IDS_WCL_BODY_CITYNAME_LA_PAZ"
+msgstr "লা পাজ"
+
+msgid "IDS_WCL_BODY_CITYNAME_LAS_VEGAS"
+msgstr "লাস ভেগাস"
+
+msgid "IDS_WCL_BODY_CITYNAME_LAGOS"
+msgstr "লাগোস"
+
+msgid "IDS_WCL_BODY_CITYNAME_KUALA_LUMPUR"
+msgstr "কয়লা লামপুর"
+
+msgid "IDS_WCL_BODY_CITYNAME_KRASNOYARSK"
+msgstr "ক্রাসনয়ার্সক"
+
+msgid "IDS_WCL_BODY_CITYNAME_KOLKATA"
+msgstr "কলকাতা"
+
+msgid "IDS_WCL_BODY_CITYNAME_KINSHASA"
+msgstr "কিনশাসা"
+
+msgid "IDS_WCL_BODY_CITYNAME_KINGSTON"
+msgstr "কিংস্টন"
+
+msgid "IDS_WCL_BODY_CITYNAME_KIEV"
+msgstr "কিয়েভ্"
+
+msgid "IDS_WCL_BODY_CITYNAME_KHARTOUM"
+msgstr "খার্টোম"
+
+msgid "IDS_WCL_BODY_CITYNAME_KHARKIV"
+msgstr "খারকিভ"
+
+msgid "IDS_WCL_BODY_CITYNAME_KHABAROVSK"
+msgstr "খাবারোভ্স্ক"
+
+msgid "IDS_WCL_BODY_CITYNAME_KATHMANDU"
+msgstr "কাঠমান্ডু"
+
+msgid "IDS_WCL_BODY_CITYNAME_KARACHI"
+msgstr "করাচি"
+
+msgid "IDS_WCL_BODY_CITYNAME_KAMPALA"
+msgstr "কাম্পালা"
+
+msgid "IDS_WCL_BODY_CITYNAME_KAMCHATKA"
+msgstr "কামচাটকা"
+
+msgid "IDS_WCL_BODY_CITYNAME_KALININGRAD"
+msgstr "কালিনিনগার্ড"
+
+msgid "IDS_WCL_BODY_CITYNAME_KABUL"
+msgstr "কাবুল"
+
+msgid "IDS_WCL_BODY_CITYNAME_JOHANNESBURG"
+msgstr "জোহানেসবার্গ"
+
+msgid "IDS_WCL_BODY_CITYNAME_JERUSALEM"
+msgstr "জেরুসালেম"
+
+msgid "IDS_WCL_BODY_CITYNAME_JEDDAH"
+msgstr "জেদ্দা"
+
+msgid "IDS_WCL_BODY_CITYNAME_JAKARTA"
+msgstr "জাকার্তা"
+
+msgid "IDS_WCL_BODY_CITYNAME_IZHEVSK"
+msgstr "ইজেভস্ক"
+
+msgid "IDS_WCL_BODY_CITYNAME_ISTANBUL"
+msgstr "ইস্তাম্বুল"
+
+msgid "IDS_WCL_BODY_CITYNAME_ISLAMABAD"
+msgstr "ইসলামাবাদ"
+
+msgid "IDS_WCL_BODY_CITYNAME_IRKUTSK"
+msgstr "ইরকুট্স্ক"
+
+msgid "IDS_WCL_BODY_CITYNAME_INDIANAPOLIS"
+msgstr "ইন্ডিয়ানাপলিস"
+
+msgid "IDS_WCL_BODY_CITYNAME_HO_CHI_MINH_CITY"
+msgstr "হো চি মিন সিটি"
+
+msgid "IDS_WCL_BODY_CITYNAME_HOVD"
+msgstr "হোভড"
+
+msgid "IDS_WCL_BODY_CITYNAME_HOUSTON"
+msgstr "হিউস্টন"
+
+msgid "IDS_WCL_BODY_CITYNAME_HONOLULU"
+msgstr "হনলুলু"
+
+msgid "IDS_WCL_BODY_CITYNAME_HONGKONG"
+msgstr "হং কং"
+
+msgid "IDS_WCL_BODY_CITYNAME_HOBART"
+msgstr "হোবার্ট"
+
+msgid "IDS_WCL_BODY_CITYNAME_HELSINKI"
+msgstr "হেলসিঙ্কি"
+
+msgid "IDS_WCL_BODY_CITYNAME_HAWAII"
+msgstr "হাওয়াই"
+
+msgid "IDS_WCL_BODY_CITYNAME_HAVANA"
+msgstr "হাভানা"
+
+msgid "IDS_WCL_BODY_CITYNAME_HARARE"
+msgstr "হারারে"
+
+msgid "IDS_WCL_BODY_CITYNAME_HANOI"
+msgstr "হ্যানয়"
+
+msgid "IDS_WCL_BODY_CITYNAME_HAMBURG"
+msgstr "হ্যামবার্গ"
+
+msgid "IDS_WCL_BODY_CITYNAME_HALIFAX"
+msgstr "হালিফ্যাক্স"
+
+msgid "IDS_WCL_BODY_CITYNAME_GUSTAVIA"
+msgstr "গুসতাভিয়া"
+
+msgid "IDS_WCL_BODY_CITYNAME_GUINEA_BISSAU"
+msgstr "গিনি বিসাউ"
+
+msgid "IDS_WCL_BODY_CITYNAME_GUAM"
+msgstr "গুয়াম"
+
+msgid "IDS_WCL_BODY_CITYNAME_GRYTVIKEN"
+msgstr "গ্রিটভিকেন"
+
+msgid "IDS_WCL_BODY_CITYNAME_GEORGETOWN"
+msgstr "জর্জটাউন"
+
+msgid "IDS_WCL_BODY_CITYNAME_GENOA"
+msgstr "জেনোয়া"
+
+msgid "IDS_WCL_BODY_CITYNAME_GENEVA"
+msgstr "জেনেভা"
+
+msgid "IDS_WCL_BODY_CITYNAME_GALAPAGOS_ISLANDS"
+msgstr "গ্যালাপেগস আইল্যান্ডস"
+
+msgid "IDS_WCL_BODY_CITYNAME_GABORONE"
+msgstr "গ্যাবরোন"
+
+msgid "IDS_WCL_BODY_CITYNAME_FREETOWN"
+msgstr "ফ্রিটাউন"
+
+msgid "IDS_WCL_BODY_CITYNAME_FORT_DE_FRANCE"
+msgstr "ফোর্ট-ডি-ফ্রান্স"
+
+msgid "IDS_WCL_BODY_CITYNAME_FLORENCE"
+msgstr "ফ্লোরেন্স"
+
+msgid "IDS_WCL_BODY_CITYNAME_EQUAORIAL_GUINEA"
+msgstr "ইকুয়েটরিয়াল গিনি"
+
+msgid "IDS_WCL_BODY_CITYNAME_EL_PASO"
+msgstr "এল পাসো"
+
+msgid "IDS_WCL_BODY_CITYNAME_EDINBURGH"
+msgstr "এডিনবার্গ"
+
+msgid "IDS_WCL_BODY_CITYNAME_EASTER_ISLAND"
+msgstr "ইস্টার আইল্যান্ড"
+
+msgid "IDS_WCL_BODY_CITYNAME_DUSHANBE"
+msgstr "দশানবে"
+
+msgid "IDS_WCL_BODY_CITYNAME_DUBLIN"
+msgstr "ডাবলিন"
+
+msgid "IDS_WCL_BODY_CITYNAME_DUBAI"
+msgstr "দুবাই"
+
+msgid "IDS_WCL_BODY_CITYNAME_DOUALA"
+msgstr "ডোয়ালা"
+
+msgid "IDS_WCL_BODY_CITYNAME_DOHA"
+msgstr "দোহা"
+
+msgid "IDS_WCL_BODY_CITYNAME_DJIBOUTI"
+msgstr "জিবুতি"
+
+msgid "IDS_WCL_BODY_CITYNAME_DIEGO_GARCIA"
+msgstr "দিয়াগো গার্সিয়া"
+
+msgid "IDS_WCL_BODY_CITYNAME_DHAKA"
+msgstr "ঢাকা"
+
+msgid "IDS_WCL_BODY_CITYNAME_DETROIT"
+msgstr "ডেট্রয়েট"
+
+msgid "IDS_WCL_BODY_CITYNAME_DENVER"
+msgstr "ডেনভার"
+
+msgid "IDS_WCL_BODY_CITYNAME_DENPASAR"
+msgstr "দেনপাসার"
+
+msgid "IDS_WCL_BODY_CITYNAME_DAR_ES_SALAAM"
+msgstr "ডার এস সালাম"
+
+msgid "IDS_WCL_BODY_CITYNAME_DARWIN"
+msgstr "ডারউইন"
+
+msgid "IDS_WCL_BODY_CITYNAME_DAMASCUS"
+msgstr "দামাসকাস"
+
+msgid "IDS_WCL_BODY_CITYNAME_DALLAS"
+msgstr "ডালাস"
+
+msgid "IDS_WCL_BODY_CITYNAME_DAKAR"
+msgstr "ডাকার"
+
+msgid "IDS_WCL_BODY_CITYNAME_CROTONE"
+msgstr "ক্রোটোন"
+
+msgid "IDS_WCL_BODY_CITYNAME_CORK"
+msgstr "কর্ক"
+
+msgid "IDS_WCL_BODY_CITYNAME_COPENHAGEN"
+msgstr "কোপেনহেগেন"
+
+msgid "IDS_WCL_BODY_CITYNAME_CONAKRY"
+msgstr "কোনাক্রি"
+
+msgid "IDS_WCL_BODY_CITYNAME_COLUMBUS"
+msgstr "কলম্বাস"
+
+msgid "IDS_WCL_BODY_CITYNAME_COLOMBO"
+msgstr "কলম্বো"
+
+msgid "IDS_WCL_BODY_CITYNAME_CLEVELAND"
+msgstr "ক্লিভল্যান্ড"
+
+msgid "IDS_WCL_BODY_CITYNAME_CHITA"
+msgstr "চিতা"
+
+msgid "IDS_WCL_BODY_CITYNAME_CHISINAU"
+msgstr "কিশিনভ"
+
+msgid "IDS_WCL_BODY_CITYNAME_CHICAGO"
+msgstr "শিকাগো"
+
+msgid "IDS_WCL_BODY_CITYNAME_CHENNAI"
+msgstr "চেন্নাই"
+
+msgid "IDS_WCL_BODY_CITYNAME_CHELYABINSK"
+msgstr "চেল্যাবিনসক"
+
+msgid "IDS_WCL_BODY_CITYNAME_CHARLOTTE_AMALIE"
+msgstr "শার্লট অ্যামেলি"
+
+msgid "IDS_WCL_BODY_CITYNAME_CHARLOTTE"
+msgstr "শার্লট"
+
+msgid "IDS_WCL_BODY_CITYNAME_CAYENNE"
+msgstr "কিয়েন"
+
+msgid "IDS_WCL_BODY_CITYNAME_CATANZARO"
+msgstr "ক্যাটানজারো"
+
+msgid "IDS_WCL_BODY_CITYNAME_CASABLANCA"
+msgstr "কাসাব্লাঙ্কা"
+
+msgid "IDS_WCL_BODY_CITYNAME_CARDIFF"
+msgstr "কার্ডিফ"
+
+msgid "IDS_WCL_BODY_CITYNAME_CARACAS"
+msgstr "কারাকাস"
+
+msgid "IDS_WCL_BODY_CITYNAME_CAPE_TOWN"
+msgstr "কেপ টাউন"
+
+msgid "IDS_WCL_BODY_CITYNAME_CANBERRA"
+msgstr "ক্যানবেরা"
+
+msgid "IDS_WCL_BODY_CITYNAME_CANARY_ISLANDS"
+msgstr "ক্যানারি আইল্যান্ডস"
+
+msgid "IDS_WCL_BODY_CITYNAME_CALGARY"
+msgstr "ক্যালগারি"
+
+msgid "IDS_WCL_BODY_CITYNAME_CAIRO"
+msgstr "কায়রো"
+
+msgid "IDS_WCL_BODY_CITYNAME_BUENOSAIRES"
+msgstr "বুয়োনার্স আয়ার্স"
+
+msgid "IDS_WCL_BODY_CITYNAME_BUDAPEST"
+msgstr "বুদাপেস্ত"
+
+msgid "IDS_WCL_BODY_CITYNAME_BUCHAREST"
+msgstr "বুখারেস্ট"
+
+msgid "IDS_WCL_BODY_CITYNAME_BRUSSELS"
+msgstr "ব্রুসেলস"
+
+msgid "IDS_WCL_BODY_CITYNAME_BRISBANE"
+msgstr "ব্রীসবেন"
+
+msgid "IDS_WCL_BODY_CITYNAME_BRIDGETOWN"
+msgstr "ব্রিজটাউন"
+
+msgid "IDS_WCL_BODY_CITYNAME_BRATISLAVA"
+msgstr "ব্রাটিসলাভা"
+
+msgid "IDS_WCL_BODY_CITYNAME_BRASILIA"
+msgstr "ব্রেসিলিয়া"
+
+msgid "IDS_WCL_BODY_CITYNAME_BOLOGNA"
+msgstr "বোলোগনা"
+
+msgid "IDS_WCL_BODY_CITYNAME_BOGOTA"
+msgstr "বোগোটা"
+
+msgid "IDS_WCL_BODY_CITYNAME_BISSAU"
+msgstr "বিসাউ"
+
+msgid "IDS_WCL_BODY_CITYNAME_BISHKEK"
+msgstr "বিশকেক"
+
+msgid "IDS_WCL_BODY_CITYNAME_BERN"
+msgstr "বের্ন"
+
+msgid "IDS_WCL_BODY_CITYNAME_BERLIN"
+msgstr "বার্লিন"
+
+msgid "IDS_WCL_BODY_CITYNAME_BELIZE_CITY"
+msgstr "বেলিজ সিটি"
+
+msgid "IDS_WCL_BODY_CITYNAME_BELGRADE"
+msgstr "বেলগ্রেড"
+
+msgid "IDS_WCL_BODY_CITYNAME_BEIRUT"
+msgstr "বেইরুট"
+
+msgid "IDS_WCL_BODY_CITYNAME_BEIJING_HONG_KONG_CHN"
+msgstr "Beijing, Hong Kong"
+
+msgid "IDS_WCL_BODY_CITYNAME_BEIJING"
+msgstr "বেইজিং"
+
+msgid "IDS_WCL_BODY_CITYNAME_BASSE_TERRE"
+msgstr "বেস-তরে"
+
+msgid "IDS_WCL_BODY_CITYNAME_BARI"
+msgstr "বারি"
+
+msgid "IDS_WCL_BODY_CITYNAME_BARCELONA"
+msgstr "বার্সেলোনা"
+
+msgid "IDS_WCL_BODY_CITYNAME_BANGUI"
+msgstr "বাঙ্গুই"
+
+msgid "IDS_WCL_BODY_CITYNAME_BANGKOK"
+msgstr "ব্যাংকক"
+
+msgid "IDS_WCL_BODY_CITYNAME_BAMAKO"
+msgstr "বামাকো"
+
+msgid "IDS_WCL_BODY_CITYNAME_BALTIMORE"
+msgstr "বাল্টিমোর"
+
+msgid "IDS_WCL_BODY_CITYNAME_BAKU"
+msgstr "বাকু"
+
+msgid "IDS_WCL_BODY_CITYNAME_BAGHDAD"
+msgstr "বাগদাদ"
+
+msgid "IDS_WCL_BODY_CITYNAME_AZORES"
+msgstr "অজরস"
+
+msgid "IDS_WCL_BODY_CITYNAME_AUSTIN"
+msgstr "অস্টিন"
+
+msgid "IDS_WCL_BODY_CITYNAME_AUCKLAND"
+msgstr "অকল্যান্ড"
+
+msgid "IDS_WCL_BODY_CITYNAME_ATLANTA"
+msgstr "অতলান্তিক"
+
+msgid "IDS_WCL_BODY_CITYNAME_ATHENS"
+msgstr "এথেন্স"
+
+msgid "IDS_WCL_BODY_CITYNAME_ASUNCION"
+msgstr "আসানসিয়ন"
+
+msgid "IDS_WCL_BODY_CITYNAME_ASTANA"
+msgstr "আসতানা"
+
+msgid "IDS_WCL_BODY_CITYNAME_ASMARA"
+msgstr "আসমারা"
+
+msgid "IDS_WCL_BODY_CITYNAME_ASHGABAT"
+msgstr "আশগাবাত"
+
+msgid "IDS_WCL_BODY_CITYNAME_ANTANANARIVO"
+msgstr "অ্যান্টানানেরিভো"
+
+msgid "IDS_WCL_BODY_CITYNAME_ANKARA"
+msgstr "আঙ্কারা"
+
+msgid "IDS_WCL_BODY_CITYNAME_ANCHORAGE"
+msgstr "অ্যাঙ্কোরেজ"
+
+msgid "IDS_WCL_BODY_CITYNAME_ANADYR"
+msgstr "আনাদির"
+
+msgid "IDS_WCL_BODY_CITYNAME_AMSTERDAME"
+msgstr "আমস্টারডাম"
+
+msgid "IDS_WCL_BODY_CITYNAME_AMMAN"
+msgstr "আম্মান"
+
+msgid "IDS_WCL_BODY_CITYNAME_AMBON"
+msgstr "অ্যামবন"
+
+msgid "IDS_WCL_BODY_CITYNAME_ALMATY"
+msgstr "আলমটি"
+
+msgid "IDS_WCL_BODY_CITYNAME_ALGIERS"
+msgstr "আলজিয়ারস্"
+
+msgid "IDS_WCL_BODY_CITYNAME_ALASKA"
+msgstr "আলাস্কা"
+
+msgid "IDS_WCL_BODY_CITYNAME_ADELAIDE"
+msgstr "এডলেড"
+
+msgid "IDS_WCL_BODY_CITYNAME_ADDIS_ABABA"
+msgstr "আদিস আবাব"
+
+msgid "IDS_WCL_BODY_CITYNAME_ACCRA"
+msgstr "অ্যাক্রা"
+
+msgid "IDS_WCL_BODY_CITYNAME_ABUDHABI"
+msgstr "আবু ধাবি"
+
+msgid "IDS_WCL_BODY_CITYNAME_ABIDJAN"
+msgstr "আবিজান"
+
+msgid "IDS_WCL_BODY_CHINA"
+msgstr "চীন"
+
+msgid "IDS_WCL_BODY_CHILE_M_COUNTRYNAME"
+msgstr "চিলি"
+
+msgid "IDS_WCL_BODY_CHILE"
+msgstr "চিলি"
+
+msgid "IDS_WCL_BODY_CHAD"
+msgstr "চাদ"
+
+msgid "IDS_WCL_BODY_CENTRAL_AFRICAN_REPUBLIC"
+msgstr "সেন্ট্রাল আফ্রিকান রিপাবলিক"
+
+msgid "IDS_WCL_BODY_CANADA_M_COUNTRYNAME"
+msgstr "কানাডা"
+
+msgid "IDS_WCL_BODY_CANADA"
+msgstr "কানাডা"
+
+msgid "IDS_WCL_BODY_CAMEROON_M_COUNTRYNAME"
+msgstr "ক্যামেরুন"
+
+msgid "IDS_WCL_BODY_CAMEROON"
+msgstr "ক্যামেরুন"
+
+msgid "IDS_WCL_BODY_CAMBODIA_M_COUNTRYNAME"
+msgstr "কম্বোডিয়া"
+
+msgid "IDS_WCL_BODY_CAMBODIA"
+msgstr "কম্বোডিয়া"
+
+msgid "IDS_WCL_BODY_BURMA"
+msgstr "বার্মা"
+
+msgid "IDS_WCL_BODY_BURKINA_FASO_M_COUNTRYNAME"
+msgstr "বারকিনা ফাসো"
+
+msgid "IDS_WCL_BODY_BURKINA_FASO"
+msgstr "বারকিনা ফাসো"
+
+msgid "IDS_WCL_BODY_BULGARIA_M_COUNTRYNAME"
+msgstr "বুলগেরিয়া"
+
+msgid "IDS_WCL_BODY_BULGARIA"
+msgstr "বুলগেরিয়া"
+
+msgid "IDS_WCL_BODY_BRITISH_VIRGIN_ISLANDS_M_COUNTRYNAME"
+msgstr "ব্রিটিশ ভার্জিন আইল্যান্ডস"
+
+msgid "IDS_WCL_BODY_BRITISH_VIRGIN_ISLANDS_ABB"
+msgstr "GB ভার্জিন দ্বীপ"
+
+msgid "IDS_WCL_BODY_BRITISH_VIRGIN_ISLANDS"
+msgstr "ব্রিটিশ ভার্জিন আইল্যান্ডস"
+
+msgid "IDS_WCL_BODY_BRAZIL_M_COUNTRYNAME"
+msgstr "ব্রাজিল"
+
+msgid "IDS_WCL_BODY_BRAZIL"
+msgstr "ব্রাজিল"
+
+msgid "IDS_WCL_BODY_BRATISLAVA"
+msgstr "ব্রাটিসলাভা"
+
+msgid "IDS_WCL_BODY_BOTSWANA_M_COUNTRYNAME"
+msgstr "বটসোয়ানা"
+
+msgid "IDS_WCL_BODY_BOTSWANA"
+msgstr "বটসোয়ানা"
+
+msgid "IDS_WCL_BODY_BOSTON"
+msgstr "বোস্টন"
+
+msgid "IDS_WCL_BODY_BOLIVIA_M_COUNTRYNAME"
+msgstr "বলিভিয়া"
+
+msgid "IDS_WCL_BODY_BOLIVIA"
+msgstr "বলিভিয়া"
+
+msgid "IDS_WCL_BODY_BELIZE"
+msgstr "বেলিজ"
+
+msgid "IDS_WCL_BODY_BELGIUM"
+msgstr "বেলজিয়াম"
+
+msgid "IDS_WCL_BODY_BELARUS_M_COUNTRYNAME"
+msgstr "বেলারুস"
+
+msgid "IDS_WCL_BODY_BELARUS"
+msgstr "বেলারুস"
+
+msgid "IDS_WCL_BODY_BARBADOS"
+msgstr "বার্বাডস"
+
+msgid "IDS_WCL_BODY_BANGLADESH"
+msgstr "বাংলাদেশ"
+
+msgid "IDS_WCL_BODY_BANGALORE"
+msgstr "ব্যাঙ্গালোর"
+
+msgid "IDS_WCL_BODY_BAHRAIN_M_COUNTRYNAME"
+msgstr "বাহরিন"
+
+msgid "IDS_WCL_BODY_BAHRAIN"
+msgstr "বাহরিন"
+
+msgid "IDS_WCL_BODY_AZERBAIJAN"
+msgstr "আজেরবাইজান"
+
+msgid "IDS_WCL_BODY_AUSTRIA_M_COUNTRYNAME"
+msgstr "অস্ট্রিয়া"
+
+msgid "IDS_WCL_BODY_AUSTRIA"
+msgstr "অস্ট্রিয়া"
+
+msgid "IDS_WCL_BODY_AUSTRALIA_M_COUNTRYNAME"
+msgstr "অস্ট্রেলিয়া"
+
+msgid "IDS_WCL_BODY_AUSTRALIA"
+msgstr "অস্ট্রেলিয়া"
+
+msgid "IDS_WCL_BODY_ARMENIA_M_COUNTRYNAME"
+msgstr "আর্মেনিয়া"
+
+msgid "IDS_WCL_BODY_ARMENIA"
+msgstr "আর্মেনিয়া"
+
+msgid "IDS_WCL_BODY_ARGENTINA_M_COUNTRYNAME"
+msgstr "আর্জেন্টিনা"
+
+msgid "IDS_WCL_BODY_ARGENTINA"
+msgstr "আর্জেন্টিনা"
+
+msgid "IDS_WCL_BODY_ANTIGUA_AND_BARBUDA"
+msgstr "অ্যান্টিগুয়া অ্যান্ড বারবুডা"
+
+msgid "IDS_WCL_BODY_ANGOLA_M_COUNTRYNAME"
+msgstr "অ্যাঙ্গোলা"
+
+msgid "IDS_WCL_BODY_ANGOLA"
+msgstr "অ্যাঙ্গোলা"
+
+msgid "IDS_WCL_BODY_AMERICAN_SAMOA_M_COUNTRYNAME"
+msgstr "আমেরিকান সামোয়া"
+
+msgid "IDS_WCL_BODY_AMERICAN_SAMOA"
+msgstr "আমেরিকান সামোয়া"
+
+msgid "IDS_WCL_BODY_ALGERIA_M_COUNTRYNAME"
+msgstr "আলজিরিয়া"
+
+msgid "IDS_WCL_BODY_ALGERIA"
+msgstr "আলজিরিয়া"
+
+msgid "IDS_WCL_BODY_AFGHANISTAN_M_COUNTRYNAME"
+msgstr "আফগানিস্তান"
+
+msgid "IDS_WCL_BODY_AFGHANISTAN"
+msgstr "আফগানিস্তান"
+
+msgid "IDS_CLOCK_HEADER_UNABLE_TO_FIND_LOCATION_ABB"
+msgstr "অবস্থান খুঁজতে অক্ষম"
+
+msgid "IDS_CLOCK_POP_LOCATION_SERVICES_NOT_AVAILABLE"
+msgstr "অবস্থান পরিষেবা অসুলভ।"
+

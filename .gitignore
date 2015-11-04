@@ -1,0 +1,16 @@
+*.exe
+*.log
+*.o
+*.os
+*.pyc
+*~
+po/*.mo
+.cproject
+.project
+.buildpath
+.sdb.devicemap
+.package-stamp
+.sign/
+SA_Report/
+Debug/
+Release/
