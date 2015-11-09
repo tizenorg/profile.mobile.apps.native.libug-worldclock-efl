@@ -57,7 +57,7 @@ static void __ug_return_cb(void *data, Eina_Bool isReload)
 	CLK_FUN_BEG();
 	struct ug_data *ugd = NULL;
 	Wcl_CitySet *cs = NULL;
-	service_h service = NULL;
+	app_control_h app_control = NULL;
 
 	ret_if(!g_ugd);
 
@@ -65,11 +65,11 @@ static void __ug_return_cb(void *data, Eina_Bool isReload)
 	cs = ugd->ad->return_data;
 
 	if (cs) {
-		service_create(&service);
-		service_add_extra_data(service, "city", cs->city);
-		service_add_extra_data(service, "city_name", _(cs->city));
-		service_add_extra_data(service, "country", cs->country);
-		service_add_extra_data(service, "country_name", _(cs->country));
+		app_control_create(&app_control);
+		app_control_add_extra_data(app_control, "city", cs->city);
+		app_control_add_extra_data(app_control, "city_name", _(cs->city));
+		app_control_add_extra_data(app_control, "country", cs->country);
+		app_control_add_extra_data(app_control, "country_name", _(cs->country));
 
 		if (ugd->ad->caller != WCL_CALLER_IS_APP_IT_SELF) {
 			const char *timezone = cs->timezone;
@@ -77,13 +77,13 @@ static void __ug_return_cb(void *data, Eina_Bool isReload)
 				timezone += 3;
 			}
 
-			service_add_extra_data(service, "timezone", timezone);
-			service_add_extra_data(service, "tzpath", cs->tz_path);
+			app_control_add_extra_data(app_control, "timezone", timezone);
+			app_control_add_extra_data(app_control, "tzpath", cs->tz_path);
 			CLK_INFO("[Result] city: %s, city_name: %s, country: %s, timezone: %s, tzpath: %s\n", cs->city, _(cs->city), cs->country, timezone, cs->tz_path);
 		}
 
-		ug_send_result(ugd->ug, service);
-		service_destroy(service);
+		ug_send_result(ugd->ug, app_control);
+		app_control_destroy(app_control);
 
 		FREEIF(ugd->ad->return_data);
 #ifdef FEATURE_SORT_ORDER
@@ -217,7 +217,7 @@ static void _show_title(void *data, Evas_Object * obj, void *event_info)
 	CLK_FUN_END();
 }
 
-static void *on_create(ui_gadget_h ug, enum ug_mode mode, service_h data, void *priv)
+static void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h data, void *priv)
 {
 	CLK_FUN_BEG();
 	Evas_Object *win = NULL;
@@ -246,10 +246,10 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode, service_h data, void *
 	GOTO_ERROR_IF(!ad->parent);
 
 	if (data) {
-		service_get_extra_data(data, "caller", &caller_name);
-		service_get_extra_data(data, "city_index", &city_index);
+		app_control_get_extra_data(data, "caller", &caller_name);
+		app_control_get_extra_data(data, "city_index", &city_index);
 
-		service_get_extra_data(data, "translation_request", &text_id);
+		app_control_get_extra_data(data, "translation_request", &text_id);
 	}
 	if (city_index) {
 		ad->city_index = atoi(city_index);
@@ -274,11 +274,11 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode, service_h data, void *
 
 	if (text_id) {
 		CLK_INFO("text_id = %d", text_id);
-		service_h service = NULL;
-		service_create(&service);
-		service_add_extra_data(service, "city_name", _(text_id));
-		ug_send_result(ug, service);
-		service_destroy(service);
+		app_control_h app_control = NULL;
+		app_control_create(&app_control);
+		app_control_add_extra_data(app_control, "city_name", _(text_id));
+		ug_send_result(ug, app_control);
+		app_control_destroy(app_control);
 
 		FREEIF(text_id);
 		ug_destroy_me(ug);
@@ -351,7 +351,7 @@ error:
 	return NULL;
 }
 
-static void on_start(ui_gadget_h ug, service_h data, void *priv)
+static void on_start(ui_gadget_h ug, app_control_h data, void *priv)
 {
 	CLK_FUN_BEG();
 	struct appdata *ad = NULL;
@@ -374,17 +374,17 @@ static void on_start(ui_gadget_h ug, service_h data, void *priv)
 	CLK_FUN_END();
 }
 
-static void on_pause(ui_gadget_h ug, service_h data, void *priv)
+static void on_pause(ui_gadget_h ug, app_control_h data, void *priv)
 {
 	CLK_FUN_BEG();
 }
 
-static void on_resume(ui_gadget_h ug, service_h data, void *priv)
+static void on_resume(ui_gadget_h ug, app_control_h data, void *priv)
 {
 	CLK_FUN_BEG();
 }
 
-static void on_destroy(ui_gadget_h ug, service_h data, void *priv)
+static void on_destroy(ui_gadget_h ug, app_control_h data, void *priv)
 {
 	CLK_FUN_BEG();
 	struct ug_data *ugd;
@@ -432,11 +432,11 @@ static void on_destroy(ui_gadget_h ug, service_h data, void *priv)
 	CLK_FUN_END();
 }
 
-static void on_message(ui_gadget_h ug, service_h msg, service_h data, void *priv)
+static void on_message(ui_gadget_h ug, app_control_h msg, app_control_h data, void *priv)
 {
 }
 
-static void on_event(ui_gadget_h ug, enum ug_event event, service_h data, void *priv)
+static void on_event(ui_gadget_h ug, enum ug_event event, app_control_h data, void *priv)
 {
 	CLK_FUN_BEG();
 	ret_if(!ug || !priv);
@@ -502,7 +502,7 @@ static void on_event(ui_gadget_h ug, enum ug_event event, service_h data, void *
 }
 
 static void on_key_event(ui_gadget_h ug, enum ug_key_event event,
-		service_h data, void *priv)
+		app_control_h data, void *priv)
 {
 	CLK_FUN_BEG();
 	ret_if(!ug);

@@ -1269,11 +1269,11 @@ static Evas_Object *_ugview_add_layout(Evas_Object *parent)
 static void _ug_reply()
 {
 	CLK_FUN_BEG();
-	service_h service = NULL;
-	service_create(&service);
-	service_add_extra_data(service, "view", "destroy");
-	ug_send_result(g_ad->ug, service);
-	service_destroy(service);
+	app_control_h app_control = NULL;
+	app_control_create(&app_control);
+	app_control_add_extra_data(app_control, "view", "destroy");
+	ug_send_result(g_ad->ug, app_control);
+	app_control_destroy(app_control);
 
 	ug_destroy_me(g_ad->ug);
 }
