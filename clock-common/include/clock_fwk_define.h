@@ -97,11 +97,11 @@ struct text_part {
 	char *msgid;
 };
 //
-typedef struct _Edje_Color_Class {
+typedef struct _clock_color_class {
 	const char *name;
 	int r, g, b, a;
 	int r2, g2, b2, a2;
 	int r3, g3, b3, a3;
-} Edje_Color_Class;
+} clock_color_class;
 
 #endif				//__CLK_FWK_DEFINE_H__

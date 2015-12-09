@@ -150,7 +150,7 @@ int get_string_from_time(time_t stime, char *time, int num, int time_format)
 }
 
 Eina_Bool clk_evas_object_color_class_set(Evas_Object * obj,
-		Edje_Color_Class * color_class)
+		clock_color_class * color_class)
 {
 	retvm_if(NULL_CHECK(obj), EINA_FALSE, "obj null");
 	retvm_if(NULL_CHECK(color_class), EINA_FALSE, "color_class null");
