@@ -384,17 +384,7 @@ sqlite3 %{TZ_SYS_DB}/.worldclock.db 'PRAGMA journal_mode = PERSIST;
 		INSERT INTO "city_table" VALUES(NULL,"IDS_CLOCK_BODY_CITYNAME_SEVERO_KURILSK","IDS_WCL_BODY_RUSSIA","GMT+11",0,1,0,0,"Asia/Srednekolymsk","Russia.png","250","50.6842326,156.1181719");'
 fi
 
-# Change file owner
-chown :$UID %{TZ_SYS_DB}/.worldclock.db
-chown :$UID %{TZ_SYS_DB}/.worldclock.db-journal
-chmod 664 %{TZ_SYS_DB}/.worldclock.db
-chmod 664 %{TZ_SYS_DB}/.worldclock.db-journal
-
-chsmack -a 'System::Shared' %{TZ_SYS_DB}/.worldclock.db
-chsmack -a 'System::Shared' %{TZ_SYS_DB}/.worldclock.db-journal
-
 %postun -p /sbin/ldconfig
-
 
 %files
 %manifest libug-worldclock-efl.manifest

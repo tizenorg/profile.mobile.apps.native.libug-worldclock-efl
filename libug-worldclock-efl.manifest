@@ -1,18 +1,4 @@
 <manifest>
-        <define>
-                <domain name="ug-worldclock-efl" />
-        </define>
-        <assign>
-                <filesystem path="/opt/usr/ug/data/ug-worldclock-efl/*" label="ug-worldclock-efl" type="transmutable"/>
-                <filesystem path="/usr/ug/res/images/ug-worldclock-efl/*" label="_"/>
-                <filesystem path="/usr/ug/res/edje/ug-worldclock-efl/*" label="_"/>
-                <filesystem path="/usr/ug/res/locale/*" label="_"/>
-                <filesystem path="/usr/ug/lib/libug-worldclock-efl.so" label="_"/>
-                <filesystem path="/usr/share/license/*" label="_"/>
-				<filesystem path="/opt/data/setting/tzlist.ini" label="_" />
-				<filesystem path="/opt/usr/data/clock" label="_" />
-				<filesystem path="/opt/usr/data/clock/tzlist.ini" label="_" />
-		</assign>
         <request>
                 <domain name="_" />
         </request>

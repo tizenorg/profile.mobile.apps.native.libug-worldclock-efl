@@ -33,5 +33,5 @@ int update_tc(Evas_Object * eo, struct _tc *tc);
 
 int get_string_from_time(time_t stime, char *time, int num, int time_format);
 
-Eina_Bool clk_evas_object_color_class_set(Evas_Object * obj, Edje_Color_Class *);
+Eina_Bool clk_evas_object_color_class_set(Evas_Object * obj, clock_color_class *);
 #endif				//__CLK_FWK_UTIL_H__
