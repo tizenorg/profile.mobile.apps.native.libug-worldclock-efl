@@ -9,7 +9,6 @@ SET(SRCS
 		taf-button.c
 	)
 
-
 INCLUDE(FindPkgConfig)
 pkg_check_modules(pkgs REQUIRED
 	appcore-efl
@@ -62,15 +61,12 @@ ADD_DEPENDENCIES(${PROJECT_NAME} ${LIB_NAME_COM})
 #install lib
 INSTALL(TARGETS ${PROJECT_NAME} DESTINATION ${UGLIBDIR})
 
-
 # make worldclock.edj
 ADD_CUSTOM_TARGET(ug_worldclock.edj
 		COMMAND edje_cc -id ${CMAKE_CURRENT_SOURCE_DIR}/../res/images
 		${CMAKE_CURRENT_SOURCE_DIR}/../res/edc/worldclock.edc ${CMAKE_BINARY_DIR}/ug_worldclock.edj
 		DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/../res/edc/worldclock.edc
 )
-
-
 
 # make taf-button-theme.edj
 ADD_CUSTOM_TARGET(ug_worldclock_button.edj
@@ -81,7 +77,6 @@ ADD_CUSTOM_TARGET(ug_worldclock_button.edj
 
 ADD_DEPENDENCIES(${PROJECT_NAME} ug_worldclock.edj)
 ADD_DEPENDENCIES(${PROJECT_NAME} ug_worldclock_button.edj)
-
 
 # install edj file
 INSTALL(FILES ${CMAKE_BINARY_DIR}/ug_worldclock.edj DESTINATION ${EDJDIR})

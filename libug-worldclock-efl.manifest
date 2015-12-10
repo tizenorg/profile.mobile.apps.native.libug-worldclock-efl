@@ -1,4 +1,8 @@
 <manifest>
+	<assign>
+		<filesystem path="/usr/dbspace/.worldclock.db" label="System::Shared" />
+		<filesystem path="/usr/dbspace/.worldclock.db-journal" label="System::Shared" />
+	</assign>
         <request>
                 <domain name="_" />
         </request>
