@@ -30,7 +30,6 @@
 #include "worldclock_add_view.h"
 #include "efl_extension.h"
 #include "clock_fwk_icu_label.h"
-#include "clock_fwk_util.h"
 
 #ifndef _
 #define _(s)  dgettext(PACKAGE, s)
@@ -38,8 +37,6 @@
 
 struct ug_data {
 	ui_gadget_h ug;
-	//Elm_Theme *th;
-
 	struct appdata *ad;
 };
 
@@ -120,6 +117,22 @@ static Evas_Object *__ug_create_main_layout(Evas_Object * parent)
 
 	CLK_FUN_END();
 	return layout;
+}
+
+/**
+* send
+* This function is  used to create bg
+* @param           name   pointer to a win main evas object
+* @return          return a Evas_Object, is a bg evas object or NULL if failed
+* @exception       if error happen, return NULL
+*/
+Evas_Object *__ug_create_bg(Evas_Object * win)
+{
+	Evas_Object *bg = elm_bg_add(win);
+	retvm_if(!bg, NULL, "bg null");
+	evas_object_size_hint_weight_set(bg, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+	evas_object_show(bg);
+	return bg;
 }
 
 /**
@@ -287,7 +300,7 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h data, vo
 	/* main layout */
 	ad->ly_main = __ug_create_main_layout(ad->parent);
 	GOTO_ERROR_IF(ad->ly_main == NULL);
-	ad->bg = create_bg(ad->ly_main);
+	ad->bg = __ug_create_bg(ad->ly_main);
 	elm_object_part_content_set(ad->ly_main, "elm.swallow.bg", ad->bg);
 
 	/* navigation bar */

@@ -16,14 +16,14 @@
  */
 
 #define __CLK_FWK_ICU_C__
+
+#include <unicode/utypes.h>
+#include <unicode/uloc.h>
+#include <unicode/udat.h>
+#include <unicode/ustring.h>
 #include "worldclock_fwk_icu.h"
 #include "worldclock_types.h"
 #include "worldclock_dlog.h"
-
-char *time_pattern[2] = {
-	"hh:mm a",
-	"HH:mm",
-};
 
 int worldclock_icu_dst_get(const char *tz_path)
 {

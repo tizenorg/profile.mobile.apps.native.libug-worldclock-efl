@@ -19,13 +19,13 @@
 #define __helloUG_efl_H__
 
 #include <Elementary.h>
-#include <libintl.h>
 
-#ifndef _EDJ
-#define _EDJ(o)         (elm_layout_edje_get(o))
-#endif
-//#define _(s)          dgettext(PKGNAME, s)
-#define dgettext_noop(s)    (s)
-//#define N_(s)         dgettext_noop(s)
+#define IS_STR_EQUAL(a, b) (!strcmp(a, b))
+#define IS_STR_NOT_EQUAL(a, b) (strcmp(a, b))
+
+//******************define:free *************************************
+#define FREEIF(p) ({if (p) {free(p); p = NULL; }})
+#define EVAS_OBJECT_DELIF(p) ({if (p) {evas_object_del(p); p = NULL; }})
+#define ECORE_TIMER_DELIF(p) ({if (p) {ecore_timer_del(p); p = NULL; }})
 
 #endif				/* __helloUG_efl_H__ */
