@@ -41,10 +41,6 @@
 #define WCL_EDJ_PATH                EDJDIR
 #define WCL_IMAGE_PATH              IMAGEDIR"/ug-worldclock-efl"
 #define WCL_EDJ_NAME                WCL_EDJ_PATH"/ug_worldclock.edj"
-#define WCL_EDJ_FLAG                WCL_EDJ_PATH"/worldclock_flag.edj"
-#define WCL_EDJ_THEME				WCL_EDJ_PATH"/ug_worldclock_button.edj"
-
-#define VCONFKEY_WORLDCLOCKDB_CHANGED "db/private/com.samsung.clock/worldclock/worldclockdb_changed"
 
 /* group name */
 #define GRP_ADD                "ug_add_layout"
