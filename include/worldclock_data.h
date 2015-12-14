@@ -21,21 +21,17 @@
 #include <Elementary.h>
 #include "worldclock_types.h"
 
-Wcl_CitySet *worldclock_ug_data_get_local_city();
-
-Eina_List *worldclock_ug_data_get_all_added_city();
 Eina_List *worldclock_ug_data_get_default_city_list(Wcl_Selection_Flag selectFlag);
-Eina_List *worldclock_ug_data_get_search_city_list(const char *search_txt,
-		Wcl_Search_Type search_type, Wcl_Selection_Flag selectFlag);
-
-Eina_Bool worldclock_ug_data_update_db_record(Wcl_CitySet * p_record);
 Eina_Bool worldclock_ug_data_get_city_status_from_db(Wcl_CitySet * p_record);
 Eina_Bool worldclock_ug_data_open_database();
 Eina_Bool worldclock_ug_data_close_database();
+void worldclock_ug_data_cityset_copy(Wcl_CitySet * dst_city, const Wcl_CitySet * src_city);
 
-int worldclock_ug_data_get_selected_city_num();
-
-void worldclock_ug_data_cityset_copy(Wcl_CitySet * dst_city,
-		const Wcl_CitySet * src_city);
+/*TODO Functions below are not used in current realization. Probably it will be used for Clock application*/
+Wcl_CitySet *worldclock_ug_data_get_local_city();
+Eina_List *worldclock_ug_data_get_all_added_city();
+Eina_List *worldclock_ug_data_get_search_city_list(const char *search_txt,
+		Wcl_Search_Type search_type, Wcl_Selection_Flag selectFlag);
+Eina_Bool worldclock_ug_data_update_db_record(Wcl_CitySet * p_record);
 
 #endif				/* __DEF_WORLDCLOCK_DATA_H_ */

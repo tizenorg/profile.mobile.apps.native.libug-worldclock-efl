@@ -31,7 +31,6 @@
 #include <system_settings.h>
 #include <tapi_common.h>
 
-#include "clock_fwk_util.h"
 #include "worldclock.h"
 #include "worldclock_data.h"
 #include "worldclock_dlog.h"
@@ -1757,11 +1756,6 @@ void worldclock_ugview_free(void *data)
 	struct appdata *ad = (struct appdata *)data;
 	uninit_alphabetic_index();
 	worldclock_ug_data_close_database();
-
-	if (ad->m_th) {
-		elm_theme_free(ad->m_th);
-		ad->m_th = NULL;
-	}
 
 	if (ad->add_ly) {
 		_ugview_clear_data(data);

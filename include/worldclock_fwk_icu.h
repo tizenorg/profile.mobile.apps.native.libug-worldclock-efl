@@ -17,7 +17,7 @@
 
 #ifndef __WCL_FWK_ICU_H__
 #define __WCL_FWK_ICU_H__
-#include "clock_fwk_icu.h"
+#include <stdbool.h>
 
 /*BEG: Gong Xingsheng<x536.gong@samsung.com> add in Mon Nov 21 01:04:37 PST 2011
  * this struct is saved hour, min, sec and current time format

@@ -36,13 +36,17 @@
 #define FLAG_BUF_SIZE         128
 #define MCC_BUF_SIZE	20
 
-#define WORLDCLOCK_MAX_CITY_COUNT   20
-
 #define WCL_EDJ_PATH                EDJDIR
-#define WCL_IMAGE_PATH              IMAGEDIR"/ug-worldclock-efl"
 #define WCL_EDJ_NAME                WCL_EDJ_PATH"/ug_worldclock.edj"
 
 /* group name */
 #define GRP_ADD                "ug_add_layout"
+
+#ifndef SUCCESS
+#define SUCCESS 0
+#endif
+#ifndef FAILED
+#define FAILED -1
+#endif
 
 #endif				/* __DEF_WORLDCLOCK_CONST_H_ */

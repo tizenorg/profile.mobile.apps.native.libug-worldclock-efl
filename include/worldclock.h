@@ -87,8 +87,6 @@ struct appdata {
 	/* Home City */
 	Wcl_CitySet *home_cs;
 
-	Elm_Theme *m_th;
-
 	Evas_Object *navi_bar;
 
 	ui_gadget_h ug;
