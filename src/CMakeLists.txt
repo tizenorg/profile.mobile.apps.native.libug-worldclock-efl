@@ -5,8 +5,6 @@ SET(SRCS
 		worldclock_util.c
 		ug_worldclock_efl.c
 		clock_fwk_icu_label.cpp
-		taf.c
-		taf-button.c
 	)
 
 
@@ -70,19 +68,7 @@ ADD_CUSTOM_TARGET(ug_worldclock.edj
 		DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/../res/edc/worldclock.edc
 )
 
-
-
-# make taf-button-theme.edj
-ADD_CUSTOM_TARGET(ug_worldclock_button.edj
-		COMMAND edje_cc -id ${CMAKE_CURRENT_SOURCE_DIR}/../res/images
-		${CMAKE_CURRENT_SOURCE_DIR}/../res/edc/taf-button-theme.edc ${CMAKE_BINARY_DIR}/ug_worldclock_button.edj
-		DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/../res/edc/taf-button-theme.edc
-)
-
 ADD_DEPENDENCIES(${PROJECT_NAME} ug_worldclock.edj)
-ADD_DEPENDENCIES(${PROJECT_NAME} ug_worldclock_button.edj)
-
 
 # install edj file
 INSTALL(FILES ${CMAKE_BINARY_DIR}/ug_worldclock.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/ug_worldclock_button.edj DESTINATION ${EDJDIR})
