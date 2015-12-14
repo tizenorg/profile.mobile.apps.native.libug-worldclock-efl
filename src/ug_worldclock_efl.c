@@ -116,7 +116,6 @@ static Evas_Object *__ug_create_main_layout(Evas_Object * parent)
 	elm_layout_theme_set(layout, "layout", "application", "default");
 	evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
-
 	evas_object_show(layout);
 
 	CLK_FUN_END();
@@ -234,10 +233,9 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h data, vo
 	// get ug window
 	win = (Evas_Object *) ug_get_window();
 	retv_if(win == NULL, NULL);
-	// malloc data
-	ad = (struct appdata *)malloc(sizeof(struct appdata));
+	// allocate data
+	ad = (struct appdata *)calloc(1, sizeof(struct appdata));
 	retv_if(ad == NULL, NULL);
-	memset(ad, 0x0, sizeof(struct appdata));
 	/*disable rotate */
 	ad->win = win;
 	ad->conform = (Evas_Object *) ug_get_conformant();
@@ -291,8 +289,6 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h data, vo
 	GOTO_ERROR_IF(ad->ly_main == NULL);
 	ad->bg = create_bg(ad->ly_main);
 	elm_object_part_content_set(ad->ly_main, "elm.swallow.bg", ad->bg);
-
-	elm_theme_extension_add(NULL, WCL_EDJ_THEME);
 
 	/* navigation bar */
 	ad->navi_bar = __ug_create_navigation_layout(ad->ly_main);

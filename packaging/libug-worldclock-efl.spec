@@ -72,7 +72,6 @@ ln -sf /usr/bin/ug-client %{TZ_SYS_RO_UG}/bin/worldclock-efl
 %defattr(-,root,root,-)
 %{TZ_SYS_RO_UG}/lib/libug-worldclock-efl.so
 %{TZ_SYS_RO_UG}/res/edje/ug-worldclock-efl/ug_worldclock.edj
-%{TZ_SYS_RO_UG}/res/edje/ug-worldclock-efl/ug_worldclock_button.edj
 %{TZ_SYS_RO_UG}/res/locale/*/LC_MESSAGES/ug-worldclock-efl.mo
 %{TZ_SYS_RO_UG}/res/images/ug-worldclock-efl/*
 %{TZ_SYS_SHARE}/license/%{name}

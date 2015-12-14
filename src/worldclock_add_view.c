@@ -38,8 +38,6 @@
 #include "worldclock_util.h"
 #include "worldclock_add_view.h"
 #include "clock_fwk_icu_label.h"
-#include "taf.h"
-#include "taf-button.h"
 
 #define MAX_LEN_CITY_NAME		16
 #define MAX_LEN_COUNTRY_NAME	24
@@ -114,6 +112,8 @@ static void _searchbar_clear_button_clicked_cb(void *data, Evas_Object *obj, voi
 static Eina_Bool _entry_changed_cb(void *data);
 
 static void _location_btn_clicked_cb(void *data, Evas_Object *obj, void *event_info);
+static void _location_btn_pressed_cb(void *data, Evas_Object *obj, void *event_info);
+static void _location_btn_unpressed_cb(void *data, Evas_Object *obj, void *event_info);
 
 static void _back_btn_clicked_cb(void *data, Evas_Object *obj, void *event_info);
 static Eina_Bool _ugview_back_button_cb(void *data, Elm_Object_Item *It);
@@ -1194,6 +1194,22 @@ static void _location_btn_clicked_cb(void *data, Evas_Object *obj, void *event_i
 	}
 }
 
+static void _location_btn_pressed_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	CLK_FUN_BEG();
+	ret_if(!data);
+	Evas_Object *location_icon = (Evas_Object *)data;
+	elm_object_signal_emit(location_icon, "location_btn.press", "elm");
+}
+
+static void _location_btn_unpressed_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	CLK_FUN_BEG()
+	ret_if(!data);
+	Evas_Object *location_icon = (Evas_Object *)data;
+	elm_object_signal_emit(location_icon, "location_btn.unpress", "elm");
+}
+
 static Evas_Object *__ugview_searchbar_add(Evas_Object *parent, void *data)
 {
 	CLK_FUN_BEG();
@@ -1243,11 +1259,16 @@ static Evas_Object *__ugview_searchbar_add(Evas_Object *parent, void *data)
 	elm_object_part_content_set(ad->searchbar_rect, "elm.swallow.button", ad->searchbar_button);
 
 	/* current city button */
-	static btn_info_s info =
-	{{"null", "null", "null"}, {"location_image_normal", "location_image_press", "location_image_disabled"}, {"null", "null", "null"}, WCL_EDJ_NAME};
-	Evas_Object *btn = taf_button_create(searchbar_layout, &info);
-	elm_object_part_content_set(searchbar_layout, "location_sw", btn);
-	evas_object_smart_callback_add(btn, "clicked", _location_btn_clicked_cb, ad);
+	Evas_Object *location_btn = elm_button_add(searchbar_layout);
+	elm_object_style_set(location_btn, "transparent");
+	Evas_Object *location_icon = elm_layout_add(location_btn);
+	elm_layout_file_set(location_icon, WCL_EDJ_NAME, "location_icon");
+	elm_object_part_content_set(location_btn, "elm.swallow.content", location_icon);
+	elm_object_part_content_set(searchbar_layout, "location_sw", location_btn);
+	evas_object_smart_callback_add(location_btn, "clicked", _location_btn_clicked_cb, ad);
+	evas_object_smart_callback_add(location_btn, "pressed", _location_btn_pressed_cb, location_icon);
+	evas_object_smart_callback_add(location_btn, "unpressed", _location_btn_unpressed_cb, location_icon);
+	evas_object_show(location_btn);
 
 	return searchbar_layout;
 }
