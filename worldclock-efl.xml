@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns="http://tizen.org/ns/packages" package="worldclock-efl" version="0.2" install-location="internal-only">
+<manifest xmlns="http://tizen.org/ns/packages" api-version="2.4" package="worldclock-efl" version="0.2" install-location="internal-only">
         <label>World clock Appcontrol</label>
         <author email="goo81.lee" href="www.samsung.com">Goo Lee</author>
         <description>World clock city list ug</description>
