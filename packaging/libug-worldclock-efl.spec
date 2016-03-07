@@ -53,8 +53,6 @@ make %{?jobs:-j%jobs}
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/license
-cp LICENSE %{buildroot}/usr/share/license/%{name}
 %make_install
 
 mkdir -p %{buildroot}/opt/usr/data/clock
@@ -74,7 +72,7 @@ ln -sf /usr/bin/ug-client %{TZ_SYS_RO_UG}/bin/worldclock-efl
 %{TZ_SYS_RO_UG}/res/edje/ug-worldclock-efl/ug_worldclock.edj
 %{TZ_SYS_RO_UG}/res/locale/*/LC_MESSAGES/ug-worldclock-efl.mo
 %{TZ_SYS_RO_UG}/res/images/ug-worldclock-efl/*
-%{TZ_SYS_RO_SHARE}/license/%{name}
+%license LICENSE
 %{TZ_SYS_RO_PACKAGES}/worldclock-efl.xml
 %{TZ_SYS_DATA}/setting/tzlist.ini
 %{TZ_SYS_DB}/.worldclock.db
