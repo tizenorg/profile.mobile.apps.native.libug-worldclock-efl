@@ -457,8 +457,9 @@ static Eina_Bool _ugview_search_matched_mcc(char *string, char *city_mcc)
 
 	ret = EINA_FALSE;
 	char *tmp_mcc = strdup(city_mcc);
+	char *save_ptr = NULL;
 	char *ptr = NULL;
-	ptr = strtok(tmp_mcc, " ");
+	ptr = strtok_r(tmp_mcc, " ", &save_ptr);
 	if (ptr) {
 		if (IS_STR_EQUAL(ptr, string)) {
 			ret = EINA_TRUE;
@@ -466,7 +467,7 @@ static Eina_Bool _ugview_search_matched_mcc(char *string, char *city_mcc)
 			return ret;
 		}
 	}
-	while ((ptr = strtok(NULL, " "))) {
+	while ((ptr = strtok_r(NULL, " ", &save_ptr))) {
 		if (IS_STR_EQUAL(ptr, string)) {
 			ret = EINA_TRUE;
 			break;
@@ -940,7 +941,7 @@ static Eina_Bool _entry_changed_cb(void *data)
 
 	//reset current city
 	if (ad->search_text[0] != '\0') {
-		strcpy(ad->current_mcc, "");
+		ad->current_mcc[0] = '\0';
 	}
 
 	ad->search_timer = NULL;
@@ -969,7 +970,7 @@ static void _searchbar_entry_preedit_changed_cb(void *data,
 	}
 
 	//reset current city
-	strcpy(ad->current_mcc, "");
+	ad->current_mcc[0] = '\0';
 
 	for (i = 0; i < strlen(tmp); i++) {
 //              CLK_INFO_GREEN("tmp[%d] = %c\n", i, tmp[i]);
@@ -1044,7 +1045,7 @@ static void _searchbar_entry_preedit_changed_cb(void *data,
 			}
 			CLK_INFO_GREEN("ad->search_text:%s\n", ad->search_text);
 		} else {
-			strcpy(ad->search_text, "");
+			ad->search_text[0] = '\0';
 		}
 
 		CLK_INFO("ad->search_text:%s\n", ad->search_text);
@@ -1115,7 +1116,7 @@ static void _searchbar_entry_changed_cb(void *data, Evas_Object *obj, void *even
 			strncpy(ad->search_text, search_str, strlen(search_str) + 1);
 		}
 	} else {
-		strcpy(ad->search_text, "");
+		ad->search_text[0] = '\0';
 	}
 	FREEIF(search_str);
 	ECORE_TIMER_DELIF(ad->search_timer);
@@ -1389,7 +1390,7 @@ static void _sort_gl_clicked_cb(void *data, Evas_Object *obj, void *event_info)
 		ad->sort = WCL_SORT_BY_NAME;
 	}
 	// update genlist
-	strcpy(ad->current_mcc, "");
+	ad->current_mcc[0] = '\0';
 	ECORE_TIMER_DELIF(ad->add_view_update_timer);
 	ad->add_view_update_timer = ecore_timer_add(NORMAL_TIMEOUT_VALUE, _ugview_genlist_update, ad);
 
