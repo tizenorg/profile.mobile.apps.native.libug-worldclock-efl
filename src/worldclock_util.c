@@ -17,7 +17,7 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <appcore-efl.h>
+//#include <appcore-efl.h>
 #include <Elementary.h>
 #include <vconf.h>
 #include <unicode/ustring.h>
@@ -30,6 +30,9 @@
 #ifndef UG_MODULE_API
 #define UG_MODULE_API __attribute__ ((visibility("default")))
 #endif
+
+static char *_edgePath = NULL;
+static char *_localePath = NULL;
 
 /**
  * Compare the city name of two cities
@@ -222,4 +225,34 @@ int worldclock_dst_get(const Wcl_CitySet * cs)
 		}
 	}
 	return dst;
+}
+
+const char *worldclock_get_egje_path()
+{
+    if(!_edgePath)
+    {
+        char *resPath = app_get_resource_path();
+        _edgePath = (char *)calloc(1, BUF_PATH);
+        snprintf(_edgePath, BUF_PATH, "%s/edje/worldclock.edj", resPath);
+        free(resPath);
+    }
+    return _edgePath;
+}
+
+const char *worldclock_get_locale_path()
+{
+    if(!_localePath)
+    {
+        char *resPath = app_get_resource_path();
+        _localePath = (char *)calloc(1, BUF_PATH);
+        snprintf(_localePath, BUF_PATH, "%s/locale", resPath);
+        free(resPath);
+    }
+    return _localePath;
+}
+
+void worldclock_path_util_free()
+{
+    free(_edgePath);
+    free(_localePath);
 }

@@ -1,4 +1,4 @@
-Name:       libug-worldclock-efl
+Name:       org.tizen.libug-worldclock-efl
 Summary:    Time Zone setup UI gadget
 Version:    0.2
 Release:    1
@@ -41,42 +41,24 @@ This is UI gadget for configuration time zone of device
 %setup -q
 
 %build
-%define PREFIX "%{TZ_SYS_RO_UG}"
+%define PREFIX "%{TZ_SYS_RO_APP}/%{name}"
 
 #TODO: Use macros TZ_USER_DATA when it will work
 cmake . -DCMAKE_INSTALL_PREFIX=%{PREFIX} \
-		-DTZ_SYS_RO_PACKAGES=%{TZ_SYS_RO_PACKAGES} \
-		-DTZ_SYS_DATA=%{TZ_SYS_DATA} \
-		-DTZ_USER_DATA=/opt/usr/data \
-		-DTZ_SYS_DB=%{TZ_SYS_DB}
+		-DTZ_SYS_RO_PACKAGES=%{TZ_SYS_RO_PACKAGES}
 make %{?jobs:-j%jobs}
 
 %install
 rm -rf %{buildroot}
 %make_install
 
-mkdir -p %{buildroot}/opt/usr/data/clock
 
-%post
-/sbin/ldconfig
-
-mkdir -p %{TZ_SYS_RO_UG}/bin/
-ln -sf /usr/bin/ug-client %{TZ_SYS_RO_UG}/bin/worldclock-efl
-
-%postun -p /sbin/ldconfig
 
 %files
 %manifest libug-worldclock-efl.manifest
 %defattr(-,root,root,-)
-%{TZ_SYS_RO_UG}/lib/libug-worldclock-efl.so
-%{TZ_SYS_RO_UG}/res/edje/ug-worldclock-efl/ug_worldclock.edj
-%{TZ_SYS_RO_UG}/res/locale/*/LC_MESSAGES/ug-worldclock-efl.mo
-%{TZ_SYS_RO_UG}/res/images/ug-worldclock-efl/*
+%{TZ_SYS_RO_APP}/%{name}/*
+%{TZ_SYS_RO_PACKAGES}/*
 %license LICENSE
-%{TZ_SYS_RO_PACKAGES}/worldclock-efl.xml
-%{TZ_SYS_DATA}/setting/tzlist.ini
-%{TZ_SYS_DB}/.worldclock.db
-%{TZ_SYS_DB}/.worldclock.db-journal
 
-#TODO: Use macros TZ_USER_DATA when it will work
-/opt/usr/data/clock/tzlist.ini
+
