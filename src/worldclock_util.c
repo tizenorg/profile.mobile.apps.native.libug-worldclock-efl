@@ -132,7 +132,7 @@ int worldclock_time_compare_cb(const void *data1, const void *data2)
 	} else if (diff_val < 0) {
 		ret = -1;
 	} else {
-		ret = 0;
+		ret = worldclock_city_compare_cb(data1, data2);
 	}
 	return ret;
 }
