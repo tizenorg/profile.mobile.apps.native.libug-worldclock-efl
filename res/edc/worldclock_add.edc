@@ -15,22 +15,22 @@
  *
  */
 
+// size
 #define ICON_SIZE 80
 #define INPUT_ELEMENTS_HEIGHT 120
 #define PADDING_WIDTH 17
+
+// color
 
 #define COLOR_ADDVIEW_SEARCHBAR_BG 249 249 249 255
 #define COLOR_LOCATION_ICON_NORMAL 20 107 147 127
 #define COLOR_LOCATION_ICON_PRESSED 31 92 102 255
 #define COLOR_LOCATION_ICON_DISABLE 195 195 195 127
 
-collections {
-
-    base_scale: 2.6;
-
 group {
 	name: "ug_add_layout";
 	parts {
+		/* background */
 		part {
 			name: "add/bg";
 			type: RECT;
@@ -40,6 +40,7 @@ group {
 				color: 255 255 255 0;
 			}
 		}
+		/* genlist swallow */
 		part {
 			name: "add/genlist";
 			type: SWALLOW;
@@ -52,7 +53,7 @@ group {
 			}
 		}
 
-	}
+	} // end of parts
 }
 
 group {
@@ -235,6 +236,4 @@ group {
 			}
 		}
 	}
-}
-
 }

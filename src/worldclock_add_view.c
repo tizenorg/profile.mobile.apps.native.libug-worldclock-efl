@@ -19,6 +19,7 @@
 #include <string.h>
 
 #include <stdio.h>
+#include <appcore-efl.h>
 #include <Elementary.h>
 #include <vconf.h>
 #include <unicode/utf8.h>
@@ -26,6 +27,7 @@
 #include <efl_extension.h>
 #include <notification.h>
 #include <tapi_common.h>
+#include <ui-gadget-module.h>
 #include <system_settings.h>
 #include <tapi_common.h>
 
@@ -455,8 +457,8 @@ static Eina_Bool _ugview_search_matched_mcc(char *string, char *city_mcc)
 
 	ret = EINA_FALSE;
 	char *tmp_mcc = strdup(city_mcc);
-	char *ptr = NULL;
 	char *save_ptr = NULL;
+	char *ptr = NULL;
 	ptr = strtok_r(tmp_mcc, " ", &save_ptr);
 	if (ptr) {
 		if (IS_STR_EQUAL(ptr, string)) {
@@ -939,7 +941,7 @@ static Eina_Bool _entry_changed_cb(void *data)
 
 	//reset current city
 	if (ad->search_text[0] != '\0') {
-	    ad->current_mcc[0] = '\0';
+		ad->current_mcc[0] = '\0';
 	}
 
 	ad->search_timer = NULL;
@@ -1043,7 +1045,7 @@ static void _searchbar_entry_preedit_changed_cb(void *data,
 			}
 			CLK_INFO_GREEN("ad->search_text:%s\n", ad->search_text);
 		} else {
-		    ad->search_text[0] = '\0';
+			ad->search_text[0] = '\0';
 		}
 
 		CLK_INFO("ad->search_text:%s\n", ad->search_text);
@@ -1114,7 +1116,7 @@ static void _searchbar_entry_changed_cb(void *data, Evas_Object *obj, void *even
 			strncpy(ad->search_text, search_str, strlen(search_str) + 1);
 		}
 	} else {
-	    ad->search_text[0] = '\0';
+		ad->search_text[0] = '\0';
 	}
 	FREEIF(search_str);
 	ECORE_TIMER_DELIF(ad->search_timer);
@@ -1214,7 +1216,7 @@ static Evas_Object *__ugview_searchbar_add(Evas_Object *parent, void *data)
 	retv_if((!parent || !data), NULL);
 	struct appdata *ad = (struct appdata *)data;;
 
-	Evas_Object *searchbar_layout = worldclock_load_edj(parent, worldclock_get_egje_path(), "editfield_layout");
+	Evas_Object *searchbar_layout = worldclock_load_edj(parent, WCL_EDJ_NAME, "editfield_layout");
 	retv_if(!searchbar_layout, NULL);
 
 	/* editfield layout */
@@ -1260,7 +1262,7 @@ static Evas_Object *__ugview_searchbar_add(Evas_Object *parent, void *data)
 	Evas_Object *location_btn = elm_button_add(searchbar_layout);
 	elm_object_style_set(location_btn, "transparent");
 	Evas_Object *location_icon = elm_layout_add(location_btn);
-	elm_layout_file_set(location_icon, worldclock_get_egje_path(), "location_icon");
+	elm_layout_file_set(location_icon, WCL_EDJ_NAME, "location_icon");
 	elm_object_part_content_set(location_btn, "elm.swallow.content", location_icon);
 	elm_object_part_content_set(searchbar_layout, "location_sw", location_btn);
 	evas_object_smart_callback_add(location_btn, "clicked", _location_btn_clicked_cb, ad);
@@ -1277,7 +1279,7 @@ static Evas_Object *_ugview_add_layout(Evas_Object *parent)
 	retv_if(!parent, NULL);
 
 	// create window layout
-	Evas_Object *layout = worldclock_load_edj(parent, worldclock_get_egje_path(), "searchbar_base");
+	Evas_Object *layout = worldclock_load_edj(parent, WCL_EDJ_NAME, "searchbar_base");
 	retv_if(!layout, NULL);
 
 	elm_object_signal_emit(layout, "elm,state,show,searchbar", "elm");
@@ -1291,10 +1293,10 @@ static void _ug_reply()
 	app_control_h app_control = NULL;
 	app_control_create(&app_control);
 	app_control_add_extra_data(app_control, "view", "destroy");
-	app_control_reply_to_launch_request(app_control, g_ad->app_caller, APP_CONTROL_RESULT_SUCCEEDED);
+	ug_send_result(g_ad->ug, app_control);
 	app_control_destroy(app_control);
 
-	ui_app_exit();
+	ug_destroy_me(g_ad->ug);
 }
 
 static void _back_btn_clicked_cb(void *data, Evas_Object *obj, void *event_info)
@@ -1626,11 +1628,9 @@ int worldclock_ugview_add(Evas_Object *parent, void *data, Wcl_Return_Cb func)
 	retv_if(!data, FAILED);
 	int ret = SUCCESS;
 	struct appdata *ad = (struct appdata *)data;
-
 	char *lang = vconf_get_str(VCONFKEY_LANGSET);
 	init_alphabetic_index(lang);
 	FREEIF(lang);
-
 	g_ad = ad;
 	g_return_cb = func;
 	const char *group_name = NULL;
@@ -1678,7 +1678,7 @@ int worldclock_ugview_add(Evas_Object *parent, void *data, Wcl_Return_Cb func)
 	memset(ad->current_mcc, 0x0, MCC_BUF_SIZE * sizeof(char));
 
 	/* load edje */
-	ad->add_layout = worldclock_load_edj(ad->add_ly, worldclock_get_egje_path(), group_name);
+	ad->add_layout = worldclock_load_edj(ad->add_ly, WCL_EDJ_NAME, group_name);
 	retv_if(ad->add_layout == NULL, FAILED);
 	elm_object_part_content_set(ad->add_ly, "elm.swallow.content", ad->add_layout);
 
@@ -1756,7 +1756,6 @@ void worldclock_ugview_free(void *data)
 
 	struct appdata *ad = (struct appdata *)data;
 	uninit_alphabetic_index();
-
 	worldclock_ug_data_close_database();
 
 	if (ad->add_ly) {

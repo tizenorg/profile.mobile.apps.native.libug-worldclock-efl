@@ -14,10 +14,10 @@
  * limitations under the License.
  *
  */
-#include "worldclock_add.edc"
+
 collections {
-	base_scale: 2.6;
+	base_scale: 2.4;
 
-
+	#include "worldclock_add.edc"
 }
 

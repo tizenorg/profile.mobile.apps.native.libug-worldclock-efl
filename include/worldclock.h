@@ -20,7 +20,7 @@
 
 #include <Elementary.h>
 #include <Ecore_IMF.h>
-#include <app.h>
+#include <ui-gadget.h>
 
 #include "worldclock_const.h"
 #include "worldclock_types.h"
@@ -45,8 +45,6 @@ struct appdata {
 	//flag for if or not hide the index
 	bool flag_index;
 
-	app_control_h app_caller;
-
 	/* Add city List */
 	//For save current search content
 	char search_text[BUF_SIZE];
@@ -64,6 +62,7 @@ struct appdata {
 
 	// samsung window layout
 	Evas_Object *ly_main;
+	Evas_Object *parent;
 	Evas_Object *more_btn;
 	Evas_Object *back_btn;
 
@@ -90,6 +89,7 @@ struct appdata {
 
 	Evas_Object *navi_bar;
 
+	ui_gadget_h ug;
 	// return a Wcl_CitySet, used in ug
 	Wcl_CitySet *return_data;
 
