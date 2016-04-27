@@ -11,4 +11,7 @@
                         <operation name="http://samsung.com/appcontrol/operation/clock/worldclock"/>
                 </application-service>
         </ui-application>
+        <privileges>
+                <privilege>http://tizen.org/privilege/telephony</privilege>
+        </privileges>
 </manifest>
