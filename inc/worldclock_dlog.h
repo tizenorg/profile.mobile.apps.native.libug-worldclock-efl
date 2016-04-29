@@ -35,9 +35,8 @@
 #define CLK_FUN_BEG()
 #define CLK_FUN_END()
 #endif
-#define CLK_INFO(fmt, arg...) (LOGD("[%s:%d] "fmt,__FILE__, __LINE__, ##arg))
-#define CLK_SINFO(fmt, arg...) (SECURE_LOGD("[%s:%d] "fmt,__FILE__, __LINE__, ##arg))
-#define CLK_ERR(fmt,arg...) (LOGE(FONT_COLOR_RED"[%s:%d] "fmt FONT_COLOR_RESET, __FILE__,  __LINE__, ##arg))
+#define CLK_INFO(fmt, arg...) (dlog_print(DLOG_INFO, LOG_TAG, "[%s:%d] "fmt,__FILE__, __LINE__, ##arg))
+#define CLK_ERR(fmt,arg...) (dlog_print(DLOG_ERROR, LOG_TAG, FONT_COLOR_RED"[%s:%d] "fmt FONT_COLOR_RESET, __FILE__,  __LINE__, ##arg))
 
 #define CLK_FUN_DEBUG_BEG()	//CLK_INFO("====>>>>fun=%s, BEGIN====>>>>",__FUNCTION__);
 #define CLK_FUN_DEBUG_END()	//CLK_INFO("====>>>>fun=%s, END====>>>>",  __FUNCTION__);
