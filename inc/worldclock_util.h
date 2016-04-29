@@ -18,7 +18,6 @@
 #ifndef __DEF_WORLDCLOCK_UTIL_H_
 #define __DEF_WORLDCLOCK_UTIL_H_
 
-#include <appcore-efl.h>
 #include <Elementary.h>
 #include <unicode/umachine.h>
 #include "worldclock.h"
@@ -83,5 +82,10 @@ Evas_Object *worldclock_load_edj(Evas_Object * parent, const char *file,
 		const char *group);
 
 int worldclock_dst_get(const Wcl_CitySet * cs);
+
+const char *worldclock_get_egje_path();
+const char *worldclock_get_locale_path();
+
+void worldclock_path_util_free();
 
 #endif				/* __DEF_WORLDCLOCK_UTIL_H_ */

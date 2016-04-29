@@ -16,9 +16,8 @@
  */
 
 #include <stdio.h>
-#include <appcore-efl.h>
 #include <Elementary.h>
-#include <db-util.h>
+#include <sqlite3.h>
 #include <fcntl.h>
 
 #include <vconf.h>
@@ -28,9 +27,9 @@
 #include "worldclock_dlog.h"
 #include "worldclock_types.h"
 #include "worldclock_util.h"
-#include <tzplatform_config.h>
 
-#define WORLDCLOCK_DB               tzplatform_mkpath(TZ_SYS_DB, ".worldclock.db")
+//TODO: remove hardcode when correct path will be acquired
+#define WORLDCLOCK_DB               "worldclock.db"
 #define WORLDCLOCK_DB_QUERY_LEN     512
 #define WORLDCLOCK_DB_TABLE_CITY    "city_table"
 
@@ -1102,9 +1101,23 @@ Eina_Bool worldclock_ug_data_open_database()
 	// check whether file exists, if not, create it
 	if (!g_hDB) {
 		// open it, create it if not exist
-		if (SQLITE_OK != db_util_open(WORLDCLOCK_DB, &g_hDB, 0)) {
-			return EINA_FALSE;
-		}
+	    char *res = NULL;
+	    res = app_get_shared_resource_path();
+	    if(res)
+	    {
+	        char db_path[BUF_SIZE];
+	        snprintf(db_path, BUF_SIZE, "%s/%s", res, WORLDCLOCK_DB);
+	        if (SQLITE_OK != sqlite3_open(db_path, &g_hDB)) {
+	            free(res);
+	            return EINA_FALSE;
+	        }
+	    }
+	    else
+	    {
+	        return EINA_FALSE;
+	    }
+	    free(res);
+
 	}
 
 	CLK_FUN_DEBUG_END();
@@ -1120,8 +1133,7 @@ Eina_Bool worldclock_ug_data_open_database()
 Eina_Bool worldclock_ug_data_close_database()
 {
 	CLK_FUN_DEBUG_BEG();
-	//sqlite3_close(g_hDB);
-	db_util_close(g_hDB);
+	sqlite3_close(g_hDB);
 	g_hDB = NULL;
 	CLK_FUN_DEBUG_END();
 	return EINA_TRUE;

@@ -22,25 +22,18 @@
 
 #include <vconf.h>
 #include <Elementary.h>
-#include <ui-gadget-module.h>
 
 #include "worldclock.h"
 #include "worldclock_dlog.h"
 #include "ug_worldclock_efl.h"
 #include "worldclock_add_view.h"
+#include "worldclock_util.h"
 #include "efl_extension.h"
 #include "clock_fwk_icu_label.h"
 
 #ifndef _
 #define _(s)  dgettext(PACKAGE, s)
 #endif
-
-struct ug_data {
-	ui_gadget_h ug;
-	struct appdata *ad;
-};
-
-static struct ug_data *g_ugd;
 
 /**
  * Callback func which should be called when exit from this ug.
@@ -52,39 +45,38 @@ static struct ug_data *g_ugd;
 static void __ug_return_cb(void *data, Eina_Bool isReload)
 {
 	CLK_FUN_BEG();
-	struct ug_data *ugd = NULL;
+	struct appdata *ad = NULL;
 	Wcl_CitySet *cs = NULL;
-	app_control_h app_control = NULL;
+	app_control_h reply = NULL;
 
-	ret_if(!g_ugd);
 
-	ugd = g_ugd;
-	cs = ugd->ad->return_data;
+	ad = data;
+	cs = ad->return_data;
 
 	if (cs) {
-		app_control_create(&app_control);
-		app_control_add_extra_data(app_control, "city", cs->city);
-		app_control_add_extra_data(app_control, "city_name", _(cs->city));
-		app_control_add_extra_data(app_control, "country", cs->country);
-		app_control_add_extra_data(app_control, "country_name", _(cs->country));
+		app_control_create(&reply);
+		app_control_add_extra_data(reply, "city", cs->city);
+		app_control_add_extra_data(reply, "city_name", _(cs->city));
+		app_control_add_extra_data(reply, "country", cs->country);
+		app_control_add_extra_data(reply, "country_name", _(cs->country));
 
-		if (ugd->ad->caller != WCL_CALLER_IS_APP_IT_SELF) {
+		if (ad->caller != WCL_CALLER_IS_APP_IT_SELF) {
 			const char *timezone = cs->timezone;
 			if (timezone == strstr(timezone, "GMT")) {
 				timezone += 3;
 			}
 
-			app_control_add_extra_data(app_control, "timezone", timezone);
-			app_control_add_extra_data(app_control, "tzpath", cs->tz_path);
+			app_control_add_extra_data(reply, "timezone", timezone);
+			app_control_add_extra_data(reply, "tzpath", cs->tz_path);
 			CLK_INFO("[Result] city: %s, city_name: %s, country: %s, timezone: %s, tzpath: %s\n", cs->city, _(cs->city), cs->country, timezone, cs->tz_path);
 		}
 
-		ug_send_result(ugd->ug, app_control);
-		app_control_destroy(app_control);
+		app_control_reply_to_launch_request(reply, ad->app_caller, APP_CONTROL_RESULT_SUCCEEDED);
+		app_control_destroy(reply);
 
-		FREEIF(ugd->ad->return_data);
+		FREEIF(ad->return_data);
 #ifdef FEATURE_SORT_ORDER
-		EVAS_OBJECT_DELIF(ugd->ad->more_popup);
+		EVAS_OBJECT_DELIF(ad->more_popup);
 #endif
 	} else {
 		CLK_ERR("No return data selected!");
@@ -229,76 +221,38 @@ static void _show_title(void *data, Evas_Object * obj, void *event_info)
 	CLK_FUN_END();
 }
 
-static void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h data, void *priv)
+static bool on_create(void *priv)
 {
 	CLK_FUN_BEG();
 	Evas_Object *win = NULL;
-	struct ug_data *ugd = NULL;
 	struct appdata *ad = NULL;
-	char *caller_name = NULL;
-	char *city_index = NULL;
-	char *text_id = NULL;
 
-	retv_if(ug == NULL || priv == NULL, NULL);
+	retv_if(priv == NULL, false);
 
-	ugd = priv;
-	ugd->ug = ug;
+	ad = priv;
+
 	// get ug window
-	win = (Evas_Object *) ug_get_window();
-	retv_if(win == NULL, NULL);
+	win = elm_win_util_standard_add(PACKAGE, PACKAGE);
+	retv_if(win == NULL, false);
 	// allocate data
 	ad = (struct appdata *)calloc(1, sizeof(struct appdata));
-	retv_if(ad == NULL, NULL);
+	retv_if(ad == NULL, false);
 	/*disable rotate */
 	ad->win = win;
-	ad->conform = (Evas_Object *) ug_get_conformant();
-	ad->ug = ug;
-	ad->parent = ug_get_parent_layout(ug);
-	GOTO_ERROR_IF(!ad->parent);
+    elm_win_conformant_set(win, EINA_TRUE);
+    elm_win_autodel_set(win, EINA_TRUE);
+    evas_object_show(win);
+	ad->conform = elm_conformant_add(win);
+    evas_object_size_hint_weight_set(ad->conform, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+    elm_win_resize_object_add(win, ad->conform);
+    evas_object_show(ad->conform);
 
-	if (data) {
-		app_control_get_extra_data(data, "caller", &caller_name);
-		app_control_get_extra_data(data, "city_index", &city_index);
-
-		app_control_get_extra_data(data, "translation_request", &text_id);
-	}
-	if (city_index) {
-		ad->city_index = atoi(city_index);
-	} else {
-		ad->city_index = -1;
-	}
-	FREEIF(city_index);
-
-	// set caller flag
-	if (caller_name && !strcmp("clock", caller_name)) {
-		ad->caller = WCL_CALLER_IS_APP_IT_SELF;
-	} else if (caller_name && !strcmp("dual_clock", caller_name)) {
-		ad->caller = WCL_CALLER_IS_LIVEBOX;
-	} else {
-		ad->caller = WCL_CALLER_IS_UI_GADGET;
-	}
-	CLK_INFO("ad->caller = %d", ad->caller);
-	FREEIF(caller_name);
 	/* language setting */
-	bindtextdomain(PACKAGE, LOCALEDIR);
+	bindtextdomain(PACKAGE, worldclock_get_locale_path());
 	textdomain(PACKAGE);
 
-	if (text_id) {
-		CLK_INFO("text_id = %d", text_id);
-		app_control_h app_control = NULL;
-		app_control_create(&app_control);
-		app_control_add_extra_data(app_control, "city_name", _(text_id));
-		ug_send_result(ug, app_control);
-		app_control_destroy(app_control);
-
-		FREEIF(text_id);
-		ug_destroy_me(ug);
-		GOTO_ERROR_IF(true);
-		return NULL;
-	}
-
 	/* main layout */
-	ad->ly_main = __ug_create_main_layout(ad->parent);
+	ad->ly_main = __ug_create_main_layout(ad->conform);
 	GOTO_ERROR_IF(ad->ly_main == NULL);
 	ad->bg = __ug_create_bg(ad->ly_main);
 	elm_object_part_content_set(ad->ly_main, "elm.swallow.bg", ad->bg);
@@ -320,12 +274,9 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h data, vo
 			ad);
 	evas_object_smart_callback_add(ad->conform, "clipboard,state,off", _show_title,
 			ad);
-
-	ugd->ad = ad;
-	g_ugd = ugd;
-
+	elm_object_content_set(ad->conform, ad->ly_main);
 	CLK_FUN_END();
-	return ad->ly_main;
+	return true;
 
 error:
 	if (ad) {
@@ -360,49 +311,22 @@ error:
 	return NULL;
 }
 
-static void on_start(ui_gadget_h ug, app_control_h data, void *priv)
-{
-	CLK_FUN_BEG();
-	struct appdata *ad = NULL;
-
-	ad = g_ugd->ad;
-
-	if (ad->conform == NULL) {
-		CLK_INFO("conformant get failed in on_create");
-		CLK_INFO("retry to get conformant");
-		ad->conform = (Evas_Object *) ug_get_conformant();
-		evas_object_smart_callback_add(ad->conform, "virtualkeypad,state,on",
-				_hide_title, ad);
-		evas_object_smart_callback_add(ad->conform, "virtualkeypad,state,off",
-				_show_title, ad);
-		evas_object_smart_callback_add(ad->conform, "clipboard,state,on",
-				_hide_title, ad);
-		evas_object_smart_callback_add(ad->conform, "clipboard,state,off",
-				_show_title, ad);
-	}
-	CLK_FUN_END();
-}
-
-static void on_pause(ui_gadget_h ug, app_control_h data, void *priv)
+static void on_pause(void *priv)
 {
 	CLK_FUN_BEG();
 }
 
-static void on_resume(ui_gadget_h ug, app_control_h data, void *priv)
+static void on_resume(void *priv)
 {
 	CLK_FUN_BEG();
 }
 
-static void on_destroy(ui_gadget_h ug, app_control_h data, void *priv)
+static void on_destroy(void *priv)
 {
 	CLK_FUN_BEG();
-	struct ug_data *ugd;
 
-	ret_if(!ug || !priv);
-
-	ugd = priv;
-	if (ugd->ad) {
-		struct appdata *ad = ugd->ad;
+	if (priv) {
+		struct appdata *ad = priv;
 		worldclock_ugview_free(ad);
 
 #ifdef FEATURE_SORT_ORDER
@@ -421,6 +345,8 @@ static void on_destroy(ui_gadget_h ug, app_control_h data, void *priv)
 		ECORE_TIMER_DELIF(ad->add_view_quit_timer);
 		ECORE_TIMER_DELIF(ad->add_view_update_timer);
 		ECORE_TIMER_DELIF(ad->search_timer);
+		if(ad->app_caller)
+		    app_control_destroy(ad->app_caller);
 
 		if (ad->conform) {
 			evas_object_smart_callback_del(ad->conform,
@@ -434,134 +360,134 @@ static void on_destroy(ui_gadget_h ug, app_control_h data, void *priv)
 			ad->conform = NULL;
 		}
 		/*enable rotate */
-		free(ugd->ad);
-		ugd->ad = NULL;
+		free(ad);
 	}
-
+	worldclock_path_util_free();
 	CLK_FUN_END();
 }
 
-static void on_message(ui_gadget_h ug, app_control_h msg, app_control_h data, void *priv)
+static void on_app_control(app_control_h app_control, void *priv)
 {
+    struct appdata *ad = NULL;
+    char *caller_name = NULL;
+    char *city_index = NULL;
+    char *text_id = NULL;
+    ret_if(!priv);
+    ad = priv;
+
+    if (app_control) {
+        app_control_clone(&ad->app_caller, app_control);
+        app_control_get_extra_data(app_control, "caller", &caller_name);
+        app_control_get_extra_data(app_control, "city_index", &city_index);
+
+        app_control_get_extra_data(app_control, "translation_request", &text_id);
+    }
+    if (city_index) {
+        ad->city_index = atoi(city_index);
+    } else {
+        ad->city_index = -1;
+    }
+    FREEIF(city_index);
+
+    // set caller flag
+    if (caller_name && !strcmp("clock", caller_name)) {
+        ad->caller = WCL_CALLER_IS_APP_IT_SELF;
+    } else if (caller_name && !strcmp("dual_clock", caller_name)) {
+        ad->caller = WCL_CALLER_IS_LIVEBOX;
+    } else {
+        ad->caller = WCL_CALLER_IS_UI_GADGET;
+    }
+    CLK_INFO("ad->caller = %d", ad->caller);
+    FREEIF(caller_name);
+
+    if (text_id) {
+        CLK_INFO("text_id = %d", text_id);
+        app_control_h reply = NULL;
+        app_control_create(&reply);
+        app_control_add_extra_data(reply, "city_name", _(text_id));
+        app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+        app_control_destroy(reply);
+
+        FREEIF(text_id);
+        ui_app_exit(); //check if it necessary
+    }
 }
 
-static void on_event(ui_gadget_h ug, enum ug_event event, app_control_h data, void *priv)
+static void on_lang_changed(app_event_info_h event_info, void *priv)
 {
-	CLK_FUN_BEG();
-	ret_if(!ug || !priv);
+    ret_if(!priv);
 
-	struct ug_data *ugd;
-	struct appdata *ad;
-	Elm_Object_Item *it = NULL;
+    struct appdata *ad;
+    ad = priv;
+    __ug_lang_update(ad);
 
-	ugd = priv;
-	if (ugd->ad) {
-		ad = ugd->ad;
-	} else {
-		return;
-	}
+    uninit_alphabetic_index();
+    char *lang = vconf_get_str(VCONFKEY_LANGSET);
+    init_alphabetic_index(lang);
+    FREEIF(lang);
 
-	switch (event) {
-	case UG_EVENT_LOW_MEMORY:
-		CLK_INFO("Event : UG_EVENT_LOW_MEMORY");
-		break;
-	case UG_EVENT_LOW_BATTERY:
-		CLK_INFO("Event : UG_EVENT_LOW_BATTERY");
-		break;
-	case UG_EVENT_LANG_CHANGE:
-		CLK_INFO("Event : UG_EVENT_LANG_CHANGE");
-		__ug_lang_update(ad);
-		uninit_alphabetic_index();
-		char *lang = vconf_get_str(VCONFKEY_LANGSET);
-		init_alphabetic_index(lang);
-		FREEIF(lang);
-		worldclock_ugview_update(ad);
-		break;
-	case UG_EVENT_ROTATE_PORTRAIT:
-	case UG_EVENT_ROTATE_PORTRAIT_UPSIDEDOWN:
-		CLK_INFO("Event : UG_EVENT_ROTATE_PORTRAIT");
-		_show_title(ad, NULL, NULL);
-		it = elm_index_selected_item_get(ad->add_index, 0);
-		if (it != NULL) {
-			elm_index_item_selected_set(it, EINA_FALSE);
-		}
-		break;
-	case UG_EVENT_ROTATE_LANDSCAPE:
-	case UG_EVENT_ROTATE_LANDSCAPE_UPSIDEDOWN:
-		CLK_INFO("Event : UG_EVENT_ROTATE_LANDSCAPE");
-		Ecore_IMF_Context *imf_context = elm_entry_imf_context_get(ad->searchbar_entry);
-		if (imf_context) {
-			if (ECORE_IMF_INPUT_PANEL_STATE_HIDE !=
-					ecore_imf_context_input_panel_state_get(imf_context)) {
-				_hide_title(ad, NULL, NULL);
-			}
-		}
-
-		it = elm_index_selected_item_get(ad->add_index, 0);
-		if (it != NULL) {
-			elm_index_item_selected_set(it, EINA_FALSE);
-		}
-		//CLK_INFO("current level = %d", level);
-		break;
-	default:
-		CLK_INFO("Event : %d", event);
-		break;
-	}
-	CLK_FUN_END();
+    worldclock_ugview_update(ad);
 }
 
-static void on_key_event(ui_gadget_h ug, enum ug_key_event event,
-		app_control_h data, void *priv)
+static void on_orient_changed(app_event_info_h event_info, void *priv)
 {
-	CLK_FUN_BEG();
-	ret_if(!ug);
+    ret_if(!priv);
 
-	switch (event) {
-	case UG_KEY_EVENT_END:
-		ug_destroy_me(ug);
-		break;
-	default:
-		break;
-	}
-	CLK_FUN_END();
+    struct appdata *ad;
+    Elm_Index_Item *it = NULL;
+    Ecore_IMF_Context *imf_context = NULL;
+    app_device_orientation_e orient = APP_DEVICE_ORIENTATION_0;
+    ad = priv;
+    app_event_get_device_orientation(event_info, &orient);
+
+    switch (orient)
+    {
+        case APP_DEVICE_ORIENTATION_0:
+        case APP_DEVICE_ORIENTATION_180:
+            _show_title(ad, NULL, NULL);
+            it = elm_index_selected_item_get(ad->add_index, 0);
+            if (it != NULL) {
+                elm_index_item_selected_set(it, EINA_FALSE);
+            }
+            break;
+        case APP_DEVICE_ORIENTATION_90:
+        case APP_DEVICE_ORIENTATION_270:
+            imf_context = elm_entry_imf_context_get(ad->searchbar_entry);
+            if (imf_context) {
+                if (ECORE_IMF_INPUT_PANEL_STATE_HIDE !=
+                        ecore_imf_context_input_panel_state_get(imf_context)) {
+                    _hide_title(ad, NULL, NULL);
+                }
+            }
+
+            it = elm_index_selected_item_get(ad->add_index, 0);
+            if (it != NULL) {
+                elm_index_item_selected_set(it, EINA_FALSE);
+            }
+            break;
+    }
 }
 
-UG_MODULE_API int UG_MODULE_INIT(struct ug_module_ops *ops)
+int main(int argc, char *argv[])
 {
-	CLK_FUN_BEG();
-	struct ug_data *ugd;
+    struct appdata *ad;
 
-	retv_if(!ops, -1);
+    ad = calloc(1, sizeof(struct appdata));
+    retv_if(!ad, -1);
 
-	ugd = calloc(1, sizeof(struct ug_data));
-	retv_if(!ugd, -1);
+    ui_app_lifecycle_callback_s cbs = {};
 
-	ops->create = on_create;
-	ops->start = on_start;
-	ops->pause = on_pause;
-	ops->resume = on_resume;
-	ops->destroy = on_destroy;
-	ops->message = on_message;
-	ops->event = on_event;
-	ops->key_event = on_key_event;
-	ops->priv = ugd;
-	ops->opt = UG_OPT_INDICATOR_ENABLE;
+    cbs.app_control = on_app_control;
+    cbs.create = on_create;
+    cbs.pause = on_pause;
+    cbs.resume = on_resume;
+    cbs.terminate = on_destroy;
 
-	CLK_FUN_END();
-	return 0;
+    app_event_handler_h handlers[3] = {};
+    ui_app_add_event_handler(&handlers[0], APP_EVENT_LANGUAGE_CHANGED, on_lang_changed, ad);
+    ui_app_add_event_handler(&handlers[1], APP_EVENT_REGION_FORMAT_CHANGED, on_lang_changed, ad);
+    ui_app_add_event_handler(&handlers[2], APP_EVENT_DEVICE_ORIENTATION_CHANGED, on_orient_changed, &ad);
+
+    return ui_app_main(argc, argv, &cbs, ad);
 }
 
-UG_MODULE_API void UG_MODULE_EXIT(struct ug_module_ops *ops)
-{
-	CLK_FUN_BEG();
-	struct ug_data *ugd;
-
-	ret_if(!ops);
-
-	ugd = ops->priv;
-
-	FREEIF(ugd);
-	g_ugd = NULL;
-
-	CLK_FUN_END();
-}
