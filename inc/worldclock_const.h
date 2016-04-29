@@ -18,6 +18,8 @@
 #ifndef __DEF_WORLDCLOCK_CONST_H_
 #define __DEF_WORLDCLOCK_CONST_H_
 
+#include <limits.h>
+
 #ifndef _
 #define _(s)  (dgettext(PACKAGE, s))
 #endif
@@ -28,6 +30,7 @@
 #define BUF_SIZE                256
 #define BUF_MIN_SIZE            32
 #define BUF_LARGE_SIZE          512
+#define BUF_PATH                PATH_MAX
 
 #define CITY_BUF_SIZE           128
 #define COUNTRY_BUF_SIZE        128
@@ -36,8 +39,7 @@
 #define FLAG_BUF_SIZE         128
 #define MCC_BUF_SIZE	20
 
-#define WCL_EDJ_PATH                EDJDIR
-#define WCL_EDJ_NAME                WCL_EDJ_PATH"/ug_worldclock.edj"
+#define PACKAGE                 "libug-worldclock-efl"
 
 /* group name */
 #define GRP_ADD                "ug_add_layout"

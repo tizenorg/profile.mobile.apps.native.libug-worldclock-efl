@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="libug-worldclock-efl" version="1.0.0">
+    <profile name="mobile"/>
+    <ui-application appid="libug-worldclock-efl" exec="libug-worldclock-efl" launch_mode="single" multiple="false" nodisplay="true" splash-screen-display="true" taskmanage="false" type="capp">
+        <label>World clock Appcontrol</label>
+        <label xml:lang="en-us">World clock Appcontrol</label>
+        <icon>libug-worldclock-efl.png</icon>
+    </ui-application>
+    <privileges>
+        <privilege>http://tizen.org/privilege/telephony</privilege>
+    </privileges>
+    <feature name="http://tizen.org/feature/screen.size.normal">true</feature>
+</manifest>
