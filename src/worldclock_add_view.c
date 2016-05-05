@@ -970,7 +970,8 @@ static void _searchbar_entry_preedit_changed_cb(void *data,
 	}
 
 	//reset current city
-	ad->current_mcc[0] = '\0';
+	if(tmp[0] != '\0')
+	    ad->current_mcc[0] = '\0';
 
 	for (i = 0; i < strlen(tmp); i++) {
 //              CLK_INFO_GREEN("tmp[%d] = %c\n", i, tmp[i]);
