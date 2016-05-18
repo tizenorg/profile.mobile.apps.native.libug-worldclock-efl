@@ -739,7 +739,7 @@ static Eina_Bool _ugview_update_index(void *data, char *buf, void *item)
 	Evas_Object *index = ad->add_index;
 	char buf_name[BUF_MIN_SIZE] = { 0, };
 	char buf_zone[BUF_MIN_SIZE] = { 0, };
-	char *ppos = NULL, *pbegin = NULL;
+	char *pbegin = NULL;
 	Elm_Object_Item *gli = (Elm_Object_Item *) item;
 	Wcl_CitySet *cs = elm_object_item_data_get(gli);
 	retv_if(!index, EINA_FALSE);
@@ -789,16 +789,9 @@ static Eina_Bool _ugview_update_index(void *data, char *buf, void *item)
 		} else {
 			pbegin = cs->timezone + 3;
 		}
-		// find dot
-		ppos = strstr(pbegin, ":");
-		if (ppos != NULL) {
-			// if timezone is not integer, get the integer part
-			strncpy(buf_zone, pbegin, ppos - pbegin + 1);
-		} else {
-			// get timezone if it is integer
-			strncpy(buf_zone, pbegin, BUF_MIN_SIZE);
-			buf_zone[strlen(cs->timezone)] = '\0';
-		}
+
+        strncpy(buf_zone, pbegin, BUF_MIN_SIZE);
+        buf_zone[strlen(cs->timezone)] = '\0';
 
 		if (strcmp(buf, buf_zone)) {
 			// append timezone into index list if it is not exist
