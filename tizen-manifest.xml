@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="libug-worldclock-efl" version="1.0.0">
+<manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="org.tizen.worldclock-efl" version="1.0.0">
     <profile name="mobile"/>
-    <ui-application appid="libug-worldclock-efl" exec="libug-worldclock-efl" launch_mode="single" multiple="false" nodisplay="true" splash-screen-display="true" taskmanage="false" type="capp">
+    <ui-application appid="org.tizen.worldclock-efl" exec="worldclock-efl" launch_mode="single" multiple="false" nodisplay="true" splash-screen-display="true" taskmanage="false" type="capp">
         <label>World clock Appcontrol</label>
         <label xml:lang="en-us">World clock Appcontrol</label>
         <icon>libug-worldclock-efl.png</icon>

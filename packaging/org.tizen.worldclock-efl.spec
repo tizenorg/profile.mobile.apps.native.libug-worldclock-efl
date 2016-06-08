@@ -1,4 +1,4 @@
-Name:       libug-worldclock-efl
+Name:       org.tizen.worldclock-efl
 Summary:    Time Zone setup UI gadget
 Version:    0.2
 Release:    1
@@ -55,7 +55,7 @@ rm -rf %{buildroot}
 
 
 %files
-%manifest libug-worldclock-efl.manifest
+%manifest org.tizen.worldclock-efl.manifest
 %defattr(-,root,root,-)
 %{TZ_SYS_RO_APP}/%{name}/*
 %{TZ_SYS_RO_PACKAGES}/*
