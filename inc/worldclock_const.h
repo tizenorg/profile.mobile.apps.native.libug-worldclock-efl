@@ -39,7 +39,7 @@
 #define FLAG_BUF_SIZE         128
 #define MCC_BUF_SIZE	20
 
-#define PACKAGE                 "libug-worldclock-efl"
+#define PACKAGE                 "worldclock-efl"
 
 /* group name */
 #define GRP_ADD                "ug_add_layout"
