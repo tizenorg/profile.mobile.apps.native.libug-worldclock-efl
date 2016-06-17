@@ -223,7 +223,7 @@ static Eina_Bool _ugview_exit_cb(void *data)
 	g_ad->add_view_quit_timer = NULL;
 
 	if (g_return_cb) {
-		g_return_cb(data, EINA_FALSE);
+		g_return_cb(g_ad, EINA_FALSE);
 		g_return_cb = NULL;
 	}
 	elm_naviframe_item_pop(g_ad->navi_bar);

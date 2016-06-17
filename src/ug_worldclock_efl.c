@@ -60,16 +60,14 @@ static void __ug_return_cb(void *data, Eina_Bool isReload)
 		app_control_add_extra_data(reply, "country", cs->country);
 		app_control_add_extra_data(reply, "country_name", _(cs->country));
 
-		if (ad->caller != WCL_CALLER_IS_APP_IT_SELF) {
-			const char *timezone = cs->timezone;
-			if (timezone == strstr(timezone, "GMT")) {
-				timezone += 3;
-			}
+        const char *timezone = cs->timezone;
+        if (timezone == strstr(timezone, "GMT")) {
+            timezone += 3;
+        }
 
-			app_control_add_extra_data(reply, "timezone", timezone);
-			app_control_add_extra_data(reply, "tzpath", cs->tz_path);
-			CLK_INFO("[Result] city: %s, city_name: %s, country: %s, timezone: %s, tzpath: %s\n", cs->city, _(cs->city), cs->country, timezone, cs->tz_path);
-		}
+        app_control_add_extra_data(reply, "timezone", timezone);
+        app_control_add_extra_data(reply, "tzpath", cs->tz_path);
+        CLK_INFO("[Result] city: %s, city_name: %s, country: %s, timezone: %s, tzpath: %s\n", cs->city, _(cs->city), cs->country, timezone, cs->tz_path);
 
 		app_control_reply_to_launch_request(reply, ad->app_caller, APP_CONTROL_RESULT_SUCCEEDED);
 		app_control_destroy(reply);
@@ -234,9 +232,7 @@ static bool on_create(void *priv)
 	// get ug window
 	win = elm_win_util_standard_add(PACKAGE, PACKAGE);
 	retv_if(win == NULL, false);
-	// allocate data
-	ad = (struct appdata *)calloc(1, sizeof(struct appdata));
-	retv_if(ad == NULL, false);
+
 	/*disable rotate */
 	ad->win = win;
     elm_win_conformant_set(win, EINA_TRUE);
@@ -263,8 +259,7 @@ static bool on_create(void *priv)
 
 	// set selection flag
 	ad->selectionFlag = WCL_SELECT_IF_HAS_TZPATH;
-	// create add view for ug
-	worldclock_ugview_add(ad->navi_bar, ad, __ug_return_cb);
+
 
 	evas_object_smart_callback_add(ad->conform, "virtualkeypad,state,on", _hide_title,
 			ad);
@@ -399,7 +394,8 @@ static void on_app_control(app_control_h app_control, void *priv)
     }
     CLK_INFO("ad->caller = %d", ad->caller);
     FREEIF(caller_name);
-
+    // create add view for ug
+    worldclock_ugview_add(ad->navi_bar, ad, __ug_return_cb);
     if (text_id) {
         CLK_INFO("text_id = %d", text_id);
         app_control_h reply = NULL;
@@ -486,7 +482,7 @@ int main(int argc, char *argv[])
     app_event_handler_h handlers[3] = {};
     ui_app_add_event_handler(&handlers[0], APP_EVENT_LANGUAGE_CHANGED, on_lang_changed, ad);
     ui_app_add_event_handler(&handlers[1], APP_EVENT_REGION_FORMAT_CHANGED, on_lang_changed, ad);
-    ui_app_add_event_handler(&handlers[2], APP_EVENT_DEVICE_ORIENTATION_CHANGED, on_orient_changed, &ad);
+    ui_app_add_event_handler(&handlers[2], APP_EVENT_DEVICE_ORIENTATION_CHANGED, on_orient_changed, ad);
 
     return ui_app_main(argc, argv, &cbs, ad);
 }
