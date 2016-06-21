@@ -1,11 +1,74 @@
-APPNAME = libug-worldclock-efl
 
+# Project Name
+APPNAME = worldclock-efl
+
+# Project Type
 type = app
+
+# Project Profile
 profile = mobile-3.0
 
-USER_SRCS = src/ug_worldclock_efl.c
-USER_DEFS =
-USER_INC_DIRS = inc
-USER_OBJS =
-USER_LIBS =
-USER_EDCS =
+# C Sources
+USER_SRCS = src/worldclock_fwk_icu.c src/ug_worldclock_efl.c src/worldclock_util.c src/worldclock_add_view.c src/worldclock_data.c src/clock_fwk_icu_label.cpp 
+USER_SRCS_ABS = 
+
+# EDC Sources
+USER_EDCS =  
+
+# PO Sources
+USER_POS = res/po/es_US.po res/po/en.po res/po/et.po res/po/fr.po res/po/he.po res/po/fi.po res/po/ro.po res/po/nb.po res/po/fr_CA.po res/po/mk.po res/po/el_GR.po res/po/ru_RU.po res/po/bg.po res/po/ta.po res/po/pl.po res/po/kn.po res/po/ca.po res/po/tr_TR.po res/po/lv.po res/po/ka.po res/po/te.po res/po/uk.po res/po/hu.po res/po/ar.po res/po/az.po res/po/zh_TW.po res/po/kk.po res/po/ja_JP.po res/po/nl.po res/po/bn.po res/po/hi.po res/po/en_PH.po res/po/ur.po res/po/ml.po res/po/de.po res/po/sr.po res/po/en_US.po res/po/is.po res/po/ko_KR.po res/po/hy.po res/po/zh_CN.po res/po/sk.po res/po/hr.po res/po/sv.po res/po/pt_PT.po res/po/uz.po res/po/es_ES.po res/po/lt.po res/po/pt_BR.po res/po/it_IT.po res/po/gl.po res/po/eu.po res/po/th.po res/po/ga.po res/po/da.po res/po/gu.po res/po/sl.po res/po/fa.po res/po/zh_HK.po res/po/si.po res/po/cs.po 
+
+# User Defines
+USER_DEFS = 
+USER_CPP_DEFS = 
+
+# User Undefines
+USER_UNDEFS = 
+USER_CPP_UNDEFS = 
+
+# User Libraries
+USER_LIBS = icui18n icuuc 
+
+# User Objects
+USER_OBJS = 
+USER_OBJS_ABS = 
+
+# User Includes
+## C Compiler
+USER_INC_DIRS = inc 
+USER_INC_DIRS_ABS = 
+USER_INC_FILES = 
+USER_INC_FILES_ABS = 
+## C++ Compiler
+USER_CPP_INC_DIRS = inc 
+USER_CPP_INC_DIRS_ABS = /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/libxml2 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/appcore-agent /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/appfw /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/attach-panel /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/badge /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/base /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/cairo /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/calendar-service2 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/call-manager /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/chromium-ewk /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ckm /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/contacts-svc /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/content /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/context-service /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/csf /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/dali /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/dali-toolkit /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/dbus-1.0 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/device /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/dlog /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ecore-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ecore-buffer-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ecore-con-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ecore-evas-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ecore-file-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ecore-imf-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ecore-imf-evas-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ecore-input-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ecore-input-evas-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ecore-ipc-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ector-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/e_dbus-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/edje-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/eet-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/efl-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/efl-extension /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/efreet-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/eina-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/eina-1/eina /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/eio-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/eldbus-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/elementary-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/email-service /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/embryo-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/emile-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/eo-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/eom /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ethumb-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ethumb-client-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/evas-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/feedback /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/fontconfig /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/freetype2 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/geofence /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/gio-unix-2.0 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/glib-2.0 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/harfbuzz /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/iotcon /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/json-glib-1.0 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/location /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/maps /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/media /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/media-content /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/messaging /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/metadata-editor /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/minicontrol /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/minizip /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/msg-service /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/network /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/notification /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/nsd/ /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/phonenumber-utils /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/sensor /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/service-adaptor /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/shortcut /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/storage /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/system /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/telephony /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/telephony-client /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ug-1 /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/ui /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/vconf /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/web /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/widget_service /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/widget_viewer_evas /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/include/wifi-direct /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/lib/dbus-1.0/include /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/lib/glib-2.0/include 
+USER_CPP_INC_FILES = 
+USER_CPP_INC_FILES_ABS = 
+
+# User Library Path
+USER_LIB_DIRS = 
+USER_LIB_DIRS_ABS = /home/dmdragan/tizen-sdk-3.0/tools/smart-build-interface/../../platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core.private/usr/lib 
+
+# EDC Resource Path
+USER_EDCS_IMAGE_DIRS = edje/images 
+USER_EDCS_IMAGE_DIRS_ABS = 
+USER_EDCS_SOUND_DIRS = edje/sounds 
+USER_EDCS_SOUND_DIRS_ABS = 
+USER_EDCS_FONT_DIRS = edje/fonts 
+USER_EDCS_FONT_DIRS_ABS = 
+
+# EDC Flags
+USER_EXT_EDC_KEYS = EDC0 
+
+USER_EXT_EDC0_EDCS = res/edje/worldclock.edc res/edje/worldclock_add.edc 
+USER_EXT_EDC0_EDCS_IMAGE_DIRS = edje/images 
+USER_EXT_EDC0_EDCS_IMAGE_DIRS_ABS = 
+USER_EXT_EDC0_EDCS_SOUND_DIRS = edje/sounds 
+USER_EXT_EDC0_EDCS_SOUND_DIRS_ABS = 
+USER_EXT_EDC0_EDCS_FONT_DIRS = edje/fonts 
+USER_EXT_EDC0_EDCS_FONT_DIRS_ABS = 
+
+# Resource Filter
+USER_RES_INCLUDE = 
+USER_RES_EXCLUDE = 
+
