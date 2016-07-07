@@ -1,6 +1,6 @@
 Name:       org.tizen.worldclock-efl
-VCS:         profile/mobile/apps/native/libug-worldclock-efl#70d252c187185959faea16706926c5252048cc78
-#RS_Ver:    20160623_1 
+#VCS_FROM:   profile/mobile/apps/native/libug-worldclock-efl#70d252c187185959faea16706926c5252048cc78
+#RS_Ver:    20160707_1 
 Summary:    Time Zone setup UI gadget
 Version:    1.0.0
 Release:    1
@@ -26,7 +26,7 @@ Requires(post):  /usr/bin/tpk-backend
 %endif
 
 %description
-#
+profile/mobile/apps/native/libug-worldclock-efl#70d252c187185959faea16706926c5252048cc78
 This is a container package which have preload TPK files
 
 %prep
