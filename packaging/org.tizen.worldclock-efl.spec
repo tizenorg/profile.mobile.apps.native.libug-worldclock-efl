@@ -1,6 +1,6 @@
 Name:       org.tizen.worldclock-efl
 #VCS_FROM:   profile/mobile/apps/native/libug-worldclock-efl#70d252c187185959faea16706926c5252048cc78
-#RS_Ver:    20160711_2 
+#RS_Ver:    20160719_1 
 Summary:    Time Zone setup UI gadget
 Version:    1.0.0
 Release:    1
